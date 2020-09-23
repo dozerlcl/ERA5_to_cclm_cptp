@@ -1,0 +1,17 @@
+ &DYNCTL
+  ldiabf_lh = .TRUE.,
+  ldyn_bbc = .TRUE.,
+  y_scalar_advect='BOTT2',
+  lexpl_lbc = .TRUE.,
+  l2tls = .TRUE.,
+  ldyn_bbc = .FALSE.,
+  rlwidth = 500000.,
+  nrdtau = 6,
+  iadv_order = 3,
+  itype_bbc_w = 1,
+  l_diff_Smag = .FALSE.,
+  itype_fast_waves = 1,
+  lspecnudge=.FALSE.,alpha_sn=0.05,
+  isc_sn=6, jsc_sn=6,
+  yvarsn='U     ','V    ',
+ /END

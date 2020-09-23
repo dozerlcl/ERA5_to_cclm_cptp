@@ -1,0 +1,17 @@
+  
+      Mean values of the timings for all processors:
+      ==============================================
+  
+Total time for INT2LM:           305.38
+Time for the setup of INT2LM:               0.13
+Time for reading external parameters:       0.19
+  
+                                      Min.     Avg.     Max.    Total
+Interpolation:                       25.51   180.09   295.07  4322.10
+  Reading coarse files:              24.22   164.01   293.79  3936.17
+  Unpack coarse records:              0.08    14.90    86.80   357.54
+  Interpolation:                      1.18     1.18     1.21    28.39
+  Add. Communication:                 0.00     0.00     0.00     0.00
+Computing LM fields                   5.14     5.14     5.15   123.44
+Writing LM fields                     4.28     4.30     4.36   103.13
+All the rest                          0.49   115.53   270.10  2772.71
