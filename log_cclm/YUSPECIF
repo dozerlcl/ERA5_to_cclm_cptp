@@ -7,15 +7,15 @@
       -----------------
   
       Variable                  Actual Value      Default Value      Format
-       pollon                      -162.0000          -170.0000        R 
-       pollat                        39.2500            32.5000        R 
+       pollon                       -91.5000          -170.0000        R 
+       pollat                        57.0000            32.5000        R 
        polgam                         0.0000             0.0000        R 
-       dlon                           0.4400             0.0080        R 
-       dlat                           0.4400             0.0080        R 
-       startlon_tot                 -25.1300            -1.2520        R 
-       startlat_tot                 -24.0900            -7.9720        R 
-       ie_tot                            101                 51        I 
-       je_tot                            111                 51        I 
+       dlon                           0.0820             0.0080        R 
+       dlat                           0.0820             0.0080        R 
+       startlon_tot                 -21.7300            -1.2520        R 
+       startlat_tot                 -14.7600            -7.9720        R 
+       ie_tot                            531                 51        I 
+       je_tot                            361                 51        I 
        ke_tot                             40                 20        I 
   
   
@@ -24,12 +24,12 @@
   
       Variable                  Actual Value      Default Value      Format
        hstart                         0.0000             0.0000        R 
-       nstop                            8928                  0        I 
-       hstop                        744.0000             0.0000        R 
-       dt                           300.0000            30.0000        R 
-       ydate_ini                  2000010100                          C*10
-       ydate_end                  2000020100                          C*10
-       ydate_bd                   2000010100                          C*10
+       nstop                             180                  0        I 
+       hstop                          6.0000             0.0000        R 
+       dt                           120.0000            30.0000        R 
+       ydate_ini                  2008071400                          C*10
+       ydate_end                  2008071406                          C*10
+       ydate_bd                   2008071400                          C*10
        itype_calendar                      0                  0        I 
        hincmxt                       24.0000             6.0000        R 
        hincmxu                       24.0000             1.0000        R 
@@ -247,7 +247,7 @@
        lcape                   F                  F        L 
        lctke                   F                  F        L 
        hincrad            1.0000             1.0000        R 
-       nincrad                12                  0        I 
+       nincrad                30                  0        I 
        nradcoarse              1                  1        I 
        ninctura                1                  1        I 
        nincconv                2                  4        I 
@@ -279,30 +279,33 @@
   
       Grid point calculations:
       Variable      Actual Value      Default Value      Format
-       lgpshort     T                  F                   L 
+       lgpshort     F                  F                   L 
        lgplong      F                  F                   L 
        lgpspec      F                  F                   L 
        n0gp                    0                  0        I 
-       nincgp                 72         2147483647        I 
+       nincgp                 30         2147483647        I 
        h0gp                 0.00               0.00        R 
-       hincgp               6.00               0.00        R 
+       hincgp               0.00               0.00        R 
   
        Selected grid points:
        Nr.:    i-index   j-index
-         1        53        59    52.220    14.135   Lindenberg_Obs                
-         2        47        63    53.633     9.983   Hamburg                       
+         1         5         5         -         -   --------------------          
+         2       529         5         -         -   --------------------          
+         3       265       180         -         -   --------------------          
+         4         5       356         -         -   --------------------          
+         5       526       356         -         -   --------------------          
   
       Mean values:
       Variable      Actual Value      Default Value      Format
        n0meanval               0                  0        I 
-       nincmeanval            24                 10        I 
+       nincmeanval            10                 10        I 
   
       Volume or ar
        l_integrals             F                  F        L 
        imin_integ              4                  4        I 
-       imax_integ             98                 98        I 
+       imax_integ            528                528        I 
        jmin_integ              4                  4        I 
-       jmax_integ            108                108        I 
+       jmax_integ            358                358        I 
        kmin_integ              1                  1        I 
        kmax_integ             40                 40        I 
        itype_diag_t2           1                  1        I 
@@ -323,11 +326,11 @@
        ncenter                78                 78        I 
        nsubcenter            255                255        I 
        ngribout                3                  1        I 
-       start restart         744                744        I 
-       stop  restart         744                744        I 
-       incr. restart         744                744        I 
+       start restart         264                264        I 
+       stop  restart         264                264        I 
+       incr. restart         264                264        I 
        ytunit_restard                  f                  C*1
-       ydir_restart          /HGST_SATA_8T_3/yycheng/CCLM_starter_test/cclm-sp-v3.1.1/step_by_step/gcm_to_cclm/data/cclm_output/restarts/
+       ydir_restart          /HGST_SATA_8T_3/yycheng/data_stage/cptp/cptp_out/cclm/restarts/
        itype_gather            1                  1        I 
        num_gribtabs           12                 12        I 
        lst_gribtabs            2                  2        I 
@@ -349,11 +352,11 @@
        yform_read   ncdf               grb1               C*4
        yform_restartncdf               bina               C*4
        yncglob_institution   -
-       yncglob_title         Europe 0.44 Starter Package
-       yncglob_source        /HGST_SATA_8T_3/yycheng/CCLM_starter_test/cclm-sp-v3.1.1/src/cclm/cclm.exe}
+       yncglob_title         CPTP CASE1 DOWNSCALING FROM ERA5
+       yncglob_source        /HGST_SATA_8T_3/yycheng/CCLM_starter_test/cclm-sp-v3.1.1/src/cclm/cclm.exe
        yncglob_project_id    -
-       yncglob_experiment_id spcclm
-       yncglob_contact       YourAddress
+       yncglob_experiment_id cptp case1
+       yncglob_contact       NJU
        yncglob_references    http://www.clm-community.eu/
        ncglob_realiz           1                  1        I 
        lasync_io               F                  F        L 
@@ -369,7 +372,7 @@
   
 Variables for initial data
        Variable     Actual Value      Default Value      Format
-       ydirini (C*250)   /HGST_SATA_8T_3/yycheng/CCLM_starter_test/cclm-sp-v3.1.1/step_by_step/gcm_to_cclm/data/int2lm_output/
+       ydirini (C*250)   /HGST_SATA_8T_3/yycheng/data_stage/cptp/cptp_out/int2lm/
        nlgw_ini                2                  2        I 
        lchkini                 T                  F        L 
        ydirhhl (C*250)   
@@ -396,11 +399,11 @@ Variables for initial data
        lan_rootdp              T                  F        L 
        lan_rho_snow            F                  F        L 
   
-       ydirbd  (C*250)   /HGST_SATA_8T_3/yycheng/CCLM_starter_test/cclm-sp-v3.1.1/step_by_step/gcm_to_cclm/data/int2lm_output/
+       ydirbd  (C*250)   /HGST_SATA_8T_3/yycheng/data_stage/cptp/cptp_out/int2lm/
        ytunitbd     d                  f                  C* 1
        nlgw_bd                 2                  2        I 
-       hincbound          6.0000             1.0000        R 
-       newbcdt               576                540        I 
+       hincbound          3.0000             1.0000        R 
+       newbcdt               540                540        I 
        hnewbcdt           0.0000             0.0000        R 
        newbc                   0                  0        I 
        nincboufac              1                  1        I 
@@ -417,17 +420,17 @@ Variables for initial data
  
       hcomb triplets 1
       begin           0.00                 0.00          R
-      end           744.00               744.00          R
+      end             6.00                 6.00          R
       incr            3.00                 3.00          R
  
  
  
  
  
-      slon            -25.1300          -25.1300         R
-      slat            -24.0900          -24.0900         R
-      elon             18.8700           18.8700         R
-      elat             24.3100           24.3100         R
+      slon            -21.7300          -21.7300         R
+      slat            -14.7600          -14.7600         R
+      elon             21.7300           21.7300         R
+      elat             14.7600           14.7600         R
  
       yform_write   ncdf              grb1               C4
       ytunit        d                 f                  C
@@ -450,7 +453,7 @@ Variables for initial data
       loutput_q_dens     F                 F             L
       lzint_above_gr     F                 F             L
  
-       ydir    (C*250)   /HGST_SATA_8T_3/yycheng/CCLM_starter_test/cclm-sp-v3.1.1/step_by_step/gcm_to_cclm/data/cclm_output/out01/
+       ydir    (C*250)   /HGST_SATA_8T_3/yycheng/data_stage/cptp/cptp_out/cclm/out01/
        ysuffix (C*25)    
  
 Variables for result data
@@ -498,17 +501,17 @@ Constant variables
  
       hcomb triplets 1
       begin           0.00                 0.00          R
-      end           744.00               744.00          R
+      end             6.00                 6.00          R
       incr            6.00                 6.00          R
  
  
  
  
  
-      slon            -25.1300          -25.1300         R
-      slat            -24.0900          -24.0900         R
-      elon             18.8700           18.8700         R
-      elat             24.3100           24.3100         R
+      slon            -21.7300          -21.7300         R
+      slat            -14.7600          -14.7600         R
+      elon             21.7300           21.7300         R
+      elat             14.7600           14.7600         R
  
       yform_write   ncdf              grb1               C4
       ytunit        d                 f                  C
@@ -531,7 +534,7 @@ Constant variables
       loutput_q_dens     F                 F             L
       lzint_above_gr     F                 F             L
  
-       ydir    (C*250)   /HGST_SATA_8T_3/yycheng/CCLM_starter_test/cclm-sp-v3.1.1/step_by_step/gcm_to_cclm/data/cclm_output/out02/
+       ydir    (C*250)   /HGST_SATA_8T_3/yycheng/data_stage/cptp/cptp_out/cclm/out02/
        ysuffix (C*25)    
  
 Variables for result data
@@ -591,17 +594,17 @@ Constant variables
  
       hcomb triplets 1
       begin           0.00                 0.00          R
-      end           744.00               744.00          R
+      end             6.00                 6.00          R
       incr            6.00                 6.00          R
  
  
  
  
  
-      slon            -25.1300          -25.1300         R
-      slat            -24.0900          -24.0900         R
-      elon             18.8700           18.8700         R
-      elat             24.3100           24.3100         R
+      slon            -21.7300          -21.7300         R
+      slat            -14.7600          -14.7600         R
+      elon             21.7300           21.7300         R
+      elat             14.7600           14.7600         R
  
       yform_write   ncdf              grb1               C4
       ytunit        d                 f                  C
@@ -624,7 +627,7 @@ Constant variables
       loutput_q_dens     F                 F             L
       lzint_above_gr     F                 F             L
  
-       ydir    (C*250)   /HGST_SATA_8T_3/yycheng/CCLM_starter_test/cclm-sp-v3.1.1/step_by_step/gcm_to_cclm/data/cclm_output/out03/
+       ydir    (C*250)   /HGST_SATA_8T_3/yycheng/data_stage/cptp/cptp_out/cclm/out03/
        ysuffix (C*25)    
  
 Constant variables
@@ -714,58 +717,57 @@ Variables for boundary input
 0     Vertical coordinate: type 2 (Gal-Chen hybrid)
  
      k      Z(k)        P0(k) 
-     1  22700.0000     40.2617
-     2  20800.0000     53.9582
-     3  19100.0000     69.9812
-     4  17550.0000     88.5358
-     5  16150.0000    109.2943
-     6  14900.0000    131.6959
-     7  13800.0000    154.9601
-     8  12785.0000    179.8255
-     9  11875.0000    205.2591
-    10  11020.0000    232.1785
-    11  10205.0000    260.8520
-    12   9440.0000    290.6994
-    13   8710.0000    322.0619
-    14   8015.0000    354.7448
-    15   7355.0000    388.5191
-    16   6725.0000    423.4133
-    17   6130.0000    458.8960
-    18   5565.0000    494.9887
-    19   5035.0000    531.0771
-    20   4530.0000    567.5646
-    21   4060.0000    603.4411
-    22   3615.0000    639.1762
-    23   3200.0000    674.1020
-    24   2815.0000    707.9242
-    25   2455.0000    740.8198
-    26   2125.0000    772.0769
-    27   1820.0000    801.9229
-    28   1545.0000    829.6353
-    29   1295.0000    855.4984
-    30   1070.0000    879.3281
-    31    870.0000    900.9547
-    32    695.0000    920.2247
-    33    542.0000    937.3394
-    34    412.0000    952.0786
-    35    303.0000    964.5774
-    36    214.0000    974.8783
-    37    143.0000    983.1576
-    38     89.0000    989.4914
-    39     49.0000    994.2036
-    40     20.0000    997.6309
+     1  22700.0000     25.3154
+     2  20800.0000     39.8257
+     3  19100.0000     57.2052
+     4  17550.0000     77.5052
+     5  16150.0000    100.2136
+     6  14900.0000    124.5949
+     7  13800.0000    149.7251
+     8  12785.0000    176.3546
+     9  11875.0000    203.3515
+    10  11020.0000    231.6767
+    11  10205.0000    261.5908
+    12   9440.0000    292.4775
+    13   8710.0000    324.6875
+    14   8015.0000    358.0208
+    15   7355.0000    392.2524
+    16   6725.0000    427.4235
+    17   6130.0000    463.0166
+    18   5565.0000    499.0754
+    19   5035.0000    535.0103
+    20   4530.0000    571.2468
+    21   4060.0000    606.8053
+    22   3615.0000    642.1738
+    23   3200.0000    676.7107
+    24   2815.0000    710.1423
+    25   2455.0000    742.6576
+    26   2125.0000    773.5633
+    27   1820.0000    803.0913
+    28   1545.0000    830.5303
+    29   1295.0000    856.1625
+    30   1070.0000    879.8040
+    31    870.0000    901.2830
+    32    695.0000    920.4420
+    33    542.0000    937.4759
+    34    412.0000    952.1596
+    35    303.0000    964.6222
+    36    214.0000    974.9010
+    37    143.0000    983.1679
+    38     89.0000    989.4954
+    39     49.0000    994.2048
+    40     20.0000    997.6311
     41      0.0000   1000.0000
  
    Boundary for change from z to terrain-following: vcflat = 11430.0000
    Half-level index where levels become flat: k =   9
  
- Exponential profile with asymptotic isothermal stratosphere 
+ Linear vertical gradient w.r.t. ln p 
  
  Values of the Reference Atmosphere: 
    Pressure at Sea-Level:                  1000.0000
    Temperature at Sea-Level:                 15.0000
-   Temp. diff. sea-level-stratosph.:         75.0000
-  Scale height for temp. decrease:        10000.0000
+   Temperature-Rate of decrease:             42.0000
  
  Full-level index corresponding to specific pressure levels:
    300 hPa: k =  12

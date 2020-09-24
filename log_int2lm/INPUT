@@ -1,5 +1,5 @@
  &CONTRL
-  ydate_ini='2008071400', hstart=0.0, hstop=9.0, hincbound=3,
+  ydate_ini='2008071400', hstart=0.0, hstop=264.0, hincbound=3,
   yinput_model='CM',
   itype_profiles_vert_interp = 1,   
   itype_aerosol = 2,

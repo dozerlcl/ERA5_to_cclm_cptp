@@ -29,9 +29,11 @@ export MXM_LOG_LEVEL=ERROR
 set -e
 
 #### !!!! Adjust this directory !!!!
-SPDIR=/HGST_SATA_8T_3/yycheng/CCLM_starter_test/cclm-sp-v3.1.1
+CCLMDIR=/HGST_SATA_8T_3/yycheng/CCLM_starter_test/cclm-sp-v3.1.1 #编译出的CCKN位置
+CASEDIR=/HGST_SATA_8T_3/yycheng/CCLM_starter_test/cptp_test/ERA5_to_cclm_cptp #处理此次CASE的文件夹
+DATADIR=/HGST_SATA_8T_3/yycheng/data_stage/cptp # 所有运行数据的位置
 
-cd ${SPDIR}/step_by_step/gcm_to_cclm/log_cclm
+cd ${CASEDIR}/log_cclm
 # clean the directory
 rm -rf I* Y*
 
@@ -40,22 +42,22 @@ NPY=8
 NPIO=0
 NP1=`expr $NPX \* $NPY`
 NP=`expr $NP1 + $NPIO`
-
+stophours=6
 #################################################
 # cat together the INPUT*-files
 #################################################
 
 cat > INPUT_ORG << end_input_org
  &LMGRID
-  startlat_tot  = -24.09, startlon_tot  = -25.13,
-  pollat = 39.25, pollon = -162.0, 
-  dlon=0.44, dlat=0.44, 
-  ie_tot=101, je_tot=111, ke_tot=40,
+  startlat_tot  = -14.76000, startlon_tot  = -21.73000,
+  pollat = 57.0, pollon = -91.5, 
+  dlon=0.08200, dlat=0.08200, 
+  ie_tot=531, je_tot=361, ke_tot=40,
  /END
  &RUNCTL
-  dt=300,
-  hstart=0,   hstop=744,
-  ydate_ini='2000010100', ydate_end='2000011000',
+  dt=120,
+  hstart=0,   hstop=${stophours},
+  ydate_ini='2008071400', ydate_end='2008071406',
   nprocx= ${NPX}, nprocy= ${NPY}, nprocio=${NPIO},
   hincmxt=24, hincmxu=24,
   itype_calendar=0,
@@ -86,17 +88,19 @@ cat > INPUT_IO  << end_input_io
   lasync_io=.FALSE., yform_read='ncdf',  
   yform_restart='ncdf',
   lbdclim=.TRUE.,
-  nhour_restart=744,744,744,
-  ydir_restart='${SPDIR}/step_by_step/gcm_to_cclm_copy/data/cclm_output/restarts/'
+  nhour_restart=264,264,264,
+  ydir_restart='${DATADIR}/cptp_out/cclm/restarts/'
   ytunit_restart='d',
   ngribout=3,
-  yncglob_title="Europe 0.44 Starter Package",
-  yncglob_source = "${SPDIR}/src/cclm/cclm.exe}",
+  ! 估计不起作用的一段
+  yncglob_title="CPTP CASE1 DOWNSCALING FROM ERA5",
+  yncglob_source = "${CCLMDIR}/src/cclm/cclm.exe",
   yncglob_project_id = "-",
-  yncglob_experiment_id ="spcclm",
+  yncglob_experiment_id ="cptp case1",
   ncglob_realization = 1,
-  yncglob_contact = "YourAddress",
+  yncglob_contact = "NJU",
   yncglob_references = "http://www.clm-community.eu/",
+
  /END
  &DATABASE
  /END
@@ -122,16 +126,16 @@ cat > INPUT_IO  << end_input_io
   lan_lai    = .TRUE.,
   lan_rootdp = .TRUE.,
   lan_rho_snow= .FALSE.,
-  ydirini='${SPDIR}/step_by_step/gcm_to_cclm_copy/data/int2lm_output/',
+  ydirini='${DATADIR}/cptp_out/int2lm',
   lchkini=.TRUE.,
-  hincbound=6,
-  ydirbd='${SPDIR}/step_by_step/gcm_to_cclm_copy/data/int2lm_output/',
+  hincbound=3.,
+  ydirbd='${DATADIR}/cptp_out/int2lm',
   lchkbd =.FALSE.,
   ytunitbd='d',
  /END
  &GRIBOUT
   yform_write='ncdf',
-  hcomb=0,744,3,
+  hcomb=0,${stophours},3,
   yvarml='FRESHSNW','PP','QC','QI','QR','QS','QV','QV_S','T','T_S','T_SNOW','T_SO','U','V','W','W_I',
          'W_SNOW','W_SO',
   yvarpl=' ', 
@@ -139,12 +143,12 @@ cat > INPUT_IO  << end_input_io
   luvmasspoint=.FALSE.,
   lcheck = .FALSE.,
   lwrite_const=.TRUE.,
-  ydir='${SPDIR}/step_by_step/gcm_to_cclm_copy/data/cclm_output/out01/',
+  ydir='${DATADIR}/cptp_out/cclm/out01/',
   ytunit='d',
  /END
  &GRIBOUT
   yform_write='ncdf',
-  hcomb=0,744,6,
+  hcomb=0,${stophours},6,
   yvarml='RAIN_CON','SNOW_CON','RAIN_GSP','SNOW_GSP','TOT_PREC',
          'ALB_RAD','ALHFL_S','ASHFL_S','ASOB_T','ASOB_S',
          'ATHB_S','ATHB_T',
@@ -157,12 +161,12 @@ cat > INPUT_IO  << end_input_io
   luvmasspoint=.TRUE.,
   lcheck = .FALSE.,
   lwrite_const=.TRUE.,
-  ydir='${SPDIR}/step_by_step/gcm_to_cclm_copy/data/cclm_output/out02/',
+  ydir='${DATADIR}/cptp_out/cclm/out02/',
   ytunit='d',
  /END
  &GRIBOUT
   yform_write='ncdf',
-  hcomb=0,744,6,
+  hcomb=0,${stophours},6,
   yvarml=' ',
   yvarpl='FI','QV','T','U','V','RELHUM',
   plev=200.,500.,850.,925.,
@@ -170,7 +174,7 @@ cat > INPUT_IO  << end_input_io
   luvmasspoint=.TRUE.,
   lcheck = .FALSE.,
   lwrite_const=.TRUE.,
-  ydir='${SPDIR}/step_by_step/gcm_to_cclm_copy/data/cclm_output/out03/',
+  ydir='${DATADIR}/cptp_out/cclm/out03/',
   ytunit='d',
  /END
 end_input_io
@@ -230,11 +234,11 @@ end_input_phy
 
 cat > INPUT_DIA << end_input_dia
  &DIACTL
-  n0meanval=0, nincmeanval=24,
-  lgplong=.FALSE., lgpshort=.TRUE., lgpspec=.FALSE.,
-  n0gp=0,      hincgp=6.0,
-  stationlist_tot= 0, 0, 52.220, 14.135, 'Lindenberg_Obs',
-                   0, 0, 53.633,  9.983, 'Hamburg',
+  !  n0meanval=0, nincmeanval=24,
+  !  lgplong=.FALSE., lgpshort=.TRUE., lgpspec=.FALSE.,
+  !  n0gp=0,      hincgp=6.0,
+  !  stationlist_tot= 0, 0, 52.220, 14.135, 'Lindenberg_Obs',
+  !                  0, 0, 53.633,  9.983, 'Hamburg',
  /END
 end_input_dia
 
@@ -256,10 +260,10 @@ end_input_ass
 # run the program
 #################################################
 
-echo ----- start CCLM
+echo ------------------------------- start CCLM  -------------------------------
 # ${SPDIR}/src/cclm/bin/cclm.exe
-mpirun -np ${NP} ${SPDIR}/src/cclm/bin/cclm.exe
+mpirun -np ${NP} ${CCLMDIR}/src/cclm/bin/cclm.exe
 # srun -l --propagate=STACK --cpu_bind=verbose,cores --distribution=block:cyclic  ${SPDIR}/src/cclm/bin/cclm.exe
-echo ----- CCLM finished
+echo ------------------------------- CCLM finished  -------------------------------
 
 cat YUSPECIF YUCHKDAT > OUTPUT
