@@ -24,9 +24,9 @@
   
       Variable                  Actual Value      Default Value      Format
        hstart                         0.0000             0.0000        R 
-       nstop                             180                  0        I 
+       nstop                             432                  0        I 
        hstop                          6.0000             0.0000        R 
-       dt                           120.0000            30.0000        R 
+       dt                            50.0000            30.0000        R 
        ydate_ini                  2008071400                          C*10
        ydate_end                  2008071406                          C*10
        ydate_bd                   2008071400                          C*10
@@ -247,7 +247,7 @@
        lcape                   F                  F        L 
        lctke                   F                  F        L 
        hincrad            1.0000             1.0000        R 
-       nincrad                30                  0        I 
+       nincrad                72                  0        I 
        nradcoarse              1                  1        I 
        ninctura                1                  1        I 
        nincconv                2                  4        I 
@@ -283,7 +283,7 @@
        lgplong      F                  F                   L 
        lgpspec      F                  F                   L 
        n0gp                    0                  0        I 
-       nincgp                 30         2147483647        I 
+       nincgp                 72         2147483647        I 
        h0gp                 0.00               0.00        R 
        hincgp               0.00               0.00        R 
   
@@ -403,7 +403,7 @@ Variables for initial data
        ytunitbd     d                  f                  C* 1
        nlgw_bd                 2                  2        I 
        hincbound          3.0000             1.0000        R 
-       newbcdt               540                540        I 
+       newbcdt               648                540        I 
        hnewbcdt           0.0000             0.0000        R 
        newbc                   0                  0        I 
        nincboufac              1                  1        I 

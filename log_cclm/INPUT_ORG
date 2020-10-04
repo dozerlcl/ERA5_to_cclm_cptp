@@ -5,7 +5,7 @@
   ie_tot=531, je_tot=361, ke_tot=40,
  /END
  &RUNCTL
-  dt=120,
+  dt=50,
   hstart=0,   hstop=6,
   ydate_ini='2008071400', ydate_end='2008071406',
   nprocx= 6, nprocy= 8, nprocio=0,
