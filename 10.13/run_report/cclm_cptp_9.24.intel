@@ -1,0 +1,2895 @@
+------------------------------- start CCLM -------------------------------
+   SETUP OF THE LM
+     INITIALIZATIONS 
+        Info about KIND-parameters:   iintegers / MPI_INT =            4
+  1275069467
+                                      int_ga    / MPI_INT =            4
+  1275069467
+     INPUT OF THE NAMELISTS
+  *** NOTE: Old 10 digit date format is used
+ 
+ ==== Code information used to build this binary ====
+ Binary name ....: lmparbin
+ 
+ Library name ......: lm_f90
+ Tag name ..........: V5_0
+ Checkin-Date ......: 2013-11-08 08:58:35
+ Checkout-Date .....: 2013-11-08 10:45:42
+ Code is modified ..: .true.
+ Compile-Date ......: 
+ Compiled by .......: uschaett
+ Compiled on .......: 
+ 
+ Macros defined .: 
+ Macros undefined: 
+ Debug options ..: 
+ 
+ Current start time : 2020-09-25 06:00
+ Running on machine : 
+ Running on nodes ..: 
+ Data decomposition : 
+ ==== End of code information ====
+ 
+     INPUT OF THE NAMELISTS FOR DYNAMICS
+   DOMAIN SIZE (approx.) in m: L_x =    4634339.77780689     
+                               L_y =    3237000.66158717     
+     INPUT OF THE NAMELISTS FOR PHYSICS
+   *** WARNING: Own specifications of soil main levels are used *** 
+   ***          These have to correspond to the levels  of the  *** 
+   ***          coarse grid model!                              *** 
+     INPUT OF THE NAMELISTS FOR DIAGNOSTICS
+  WARNING  *** nincgp is set to 1 hour *** 
+     INPUT OF THE NAMELISTS FOR GRIB-IO
+ 
+   *** WARNING: Horizontal diffusion specified but lhordiff=F or hd_corr_trcr_xx
+ =0***
+   (Your specification: itype_diff is not respected for QV)
+ 
+ 
+   *** WARNING: Horizontal diffusion specified but lhordiff=F or hd_corr_trcr_xx
+ =0***
+   (Your specification: itype_diff is not respected for QC)
+ 
+     ALLOCATE SPACE
+   hd_mask - SETUP: i_west  =           58
+   hd_mask - SETUP: i_east  =          474
+   hd_mask - SETUP: j_south =           58
+   hd_mask - SETUP: j_north =          304
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/laf2008071400.nc
+ CLOSING ncdf FILE
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008071400.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008071403.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out01/lffd2008071400c.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out02/lffd2008071400c.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out03/lffd2008071400c.nc
+ CLOSING ncdf FILE
+  
+   The tracers currently handled in the model are:
+      ============================================
+  
+       #1......KEY.......  .............VALUE............  ....TYPE....
+       NAME                                          'QV'  STRING                
+       PARENT                          'organize_physics'  STRING                
+       UNITS                                    'kg kg-1'  STRING                
+       NC_STDNAME                     'specific_humidity'  STRING                
+       NC_LONGNAME                    'specific humidity'  STRING                
+       GRB_PARAM                                       51  INTEGER               
+       GRB_TABLE                                        1  INTEGER               
+       ADV                                              1  INTEGER               
+       DIFF                                             0  INTEGER               
+       TURB                                             1  INTEGER               
+       CONV                                             0  INTEGER               
+       INI                                              1  INTEGER               
+       LBC                                              1  INTEGER               
+       BBC                                              2  INTEGER               
+       RELAX                                            1  INTEGER               
+       DAMP                                             1  INTEGER               
+       CLP                                              1  INTEGER               
+       ADD_CLP_ADV                                  FALSE  LOGICAL               
+       BD_0GRAD_FORCED                              FALSE  LOGICAL               
+       BD_SET_FORCED                                    0  INTEGER               
+       MASSFLX_CLP                                   TRUE  LOGICAL               
+       DAMP_FORCED                                  FALSE  LOGICAL               
+       SURF_FIELD                                          POINTER               
+                                                                                     
+       #2......KEY.......  .............VALUE............  ....TYPE....
+       NAME                                          'QC'  STRING                
+       PARENT                          'organize_physics'  STRING                
+       UNITS                                    'kg kg-1'  STRING                
+       NC_STDNAME          'mass_fraction_of_cloud_liquid  STRING                
+       NC_LONGNAME         'specific cloud liquid water c  STRING                
+       GRB_PARAM                                       31  INTEGER               
+       GRB_TABLE                                        2  INTEGER               
+       ADV                                              1  INTEGER               
+       DIFF                                             0  INTEGER               
+       TURB                                             1  INTEGER               
+       CONV                                             0  INTEGER               
+       INI                                              1  INTEGER               
+       LBC                                              1  INTEGER               
+       BBC                                              0  INTEGER               
+       RELAX                                            1  INTEGER               
+       DAMP                                             1  INTEGER               
+       CLP                                              1  INTEGER               
+       ADD_CLP_ADV                                  FALSE  LOGICAL               
+       BD_0GRAD_FORCED                              FALSE  LOGICAL               
+       BD_SET_FORCED                                    0  INTEGER               
+       MASSFLX_CLP                                   TRUE  LOGICAL               
+       DAMP_FORCED                                  FALSE  LOGICAL               
+       SURF_FIELD                                          POINTER               
+                                                                                     
+       #3......KEY.......  .............VALUE............  ....TYPE....
+       NAME                                          'QI'  STRING                
+       PARENT                          'organize_physics'  STRING                
+       UNITS                                    'kg kg-1'  STRING                
+       NC_STDNAME          'mass_fraction_of_cloud_ice_in  STRING                
+       NC_LONGNAME           'specific cloud ice content'  STRING                
+       GRB_PARAM                                       33  INTEGER               
+       GRB_TABLE                                        2  INTEGER               
+       ADV                                              1  INTEGER               
+       DIFF                                             0  INTEGER               
+       TURB                                             1  INTEGER               
+       CONV                                             0  INTEGER               
+       INI                                              0  INTEGER               
+       LBC                                              0  INTEGER               
+       BBC                                              0  INTEGER               
+       RELAX                                            1  INTEGER               
+       DAMP                                             1  INTEGER               
+       CLP                                              1  INTEGER               
+       ADD_CLP_ADV                                  FALSE  LOGICAL               
+       BD_0GRAD_FORCED                               TRUE  LOGICAL               
+       BD_SET_FORCED                                    0  INTEGER               
+       MASSFLX_CLP                                  FALSE  LOGICAL               
+       DAMP_FORCED                                  FALSE  LOGICAL               
+       SURF_FIELD                                          POINTER               
+                                                                                     
+       #4......KEY.......  .............VALUE............  ....TYPE....
+       NAME                                          'QR'  STRING                
+       PARENT                          'organize_physics'  STRING                
+       UNITS                                    'kg kg-1'  STRING                
+       NC_STDNAME          'mass_fraction_of_rain_in_air'  STRING                
+       NC_LONGNAME                'specific rain content'  STRING                
+       GRB_PARAM                                       35  INTEGER               
+       GRB_TABLE                                        2  INTEGER               
+       ADV                                              1  INTEGER               
+       DIFF                                             0  INTEGER               
+       TURB                                             0  INTEGER               
+       CONV                                             0  INTEGER               
+       INI                                              0  INTEGER               
+       LBC                                              3  INTEGER               
+       BBC                                              0  INTEGER               
+       RELAX                                            0  INTEGER               
+       DAMP                                             0  INTEGER               
+       CLP                                              1  INTEGER               
+       ADD_CLP_ADV                                   TRUE  LOGICAL               
+       BD_0GRAD_FORCED                               TRUE  LOGICAL               
+       BD_SET_FORCED                                    1  INTEGER               
+       MASSFLX_CLP                                  FALSE  LOGICAL               
+       DAMP_FORCED                                  FALSE  LOGICAL               
+       SURF_FIELD                                          POINTER               
+                                                                                     
+       #5......KEY.......  .............VALUE............  ....TYPE....
+       NAME                                          'QS'  STRING                
+       PARENT                          'organize_physics'  STRING                
+       UNITS                                    'kg kg-1'  STRING                
+       NC_STDNAME          'mass_fraction_of_snow_in_air'  STRING                
+       NC_LONGNAME                'specific snow content'  STRING                
+       GRB_PARAM                                       36  INTEGER               
+       GRB_TABLE                                        2  INTEGER               
+       ADV                                              1  INTEGER               
+       DIFF                                             0  INTEGER               
+       TURB                                             0  INTEGER               
+       CONV                                             0  INTEGER               
+       INI                                              0  INTEGER               
+       LBC                                              3  INTEGER               
+       BBC                                              0  INTEGER               
+       RELAX                                            0  INTEGER               
+       DAMP                                             0  INTEGER               
+       CLP                                              1  INTEGER               
+       ADD_CLP_ADV                                   TRUE  LOGICAL               
+       BD_0GRAD_FORCED                               TRUE  LOGICAL               
+       BD_SET_FORCED                                    1  INTEGER               
+       MASSFLX_CLP                                  FALSE  LOGICAL               
+       DAMP_FORCED                                  FALSE  LOGICAL               
+       SURF_FIELD                                          POINTER               
+                                                                                     
+  
+   INITIALIZATIONS
+     INITIALIZATIONS for DYNAMICS and RELAXATION
+  Minimum horizontal grid spacing (dx, dy):    8817.42100181064     
+   9118.31172278076     
+  Minimum vertical   grid spacing (dz)    :    20.0000000000000     
+  Value of big time step used    :    60.0000000000000     
+ Subr.[init_grid_metrics] ...
+  
+  Damping coefficients in Rayleigh damping layer
+  level   height    damping coefficient
+     1    21750.00      0.163970
+     2    19950.00      0.144962
+     3    18325.00      0.115482
+     4    16850.00      0.083333
+     5    15525.00      0.054307
+     6    14350.00      0.031501
+     7    13292.50      0.015296
+     8    12330.00      0.005258
+     9    11447.50      0.000601
+  
+     Lowest Level with Rayleigh-damping:            9
+  
+     PHYSICAL PACKAGES
+ *****************************************************
+ *   Radiative transfer calculations employ data     *
+ *        provided in routine rad_aibi               *
+ *****************************************************
+     INITIALIZE CONTROL VARIABLES AND MEAN VALUES
+   TIME STEPPING
+ CS=   348.928160417572       DT=   60.0000000000000       DTSMAX=
+   16.3492290186082     
+ SHORT TIME STEP of 1. RK step    10.0000000000000      , number of steps: 
+           2
+ SHORT TIME STEP of 2. RK step    10.0000000000000      , number of steps: 
+           3
+ SHORT TIME STEP of 3. RK step    10.0000000000000      , number of steps: 
+           6
+ ismtstep_sum =           11  ismtstep_max =            6
+  LEVELINDEX WHERE LEVELS BECOME FLAT, KFLAT =            9
+  BETA_SW  =   0.400000000000000       BETA_GW  =   0.400000000000000     
+  BETA2_SW =   0.400000000000000       BETA2_GW =   0.400000000000000     
+  XKD =   0.100000000000000     
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out01/lffd2008071400.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out02/lffd2008071400.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out03/lffd2008071400p.nc
+ CLOSING ncdf FILE
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   PID 397063 RUNNING AT intel-wang-1
+=   EXIT CODE: 6
+=   CLEANING UP REMAINING PROCESSES
+=   YOU CAN IGNORE THE BELOW CLEANUP MESSAGES
+===================================================================================
+   Intel(R) MPI Library troubleshooting guide:
+      https://software.intel.com/node/561764
+===================================================================================
+------------------------------- start CCLM -------------------------------
+   SETUP OF THE LM
+     INITIALIZATIONS 
+        Info about KIND-parameters:   iintegers / MPI_INT =            4
+  1275069467
+                                      int_ga    / MPI_INT =            4
+  1275069467
+     INPUT OF THE NAMELISTS
+  *** NOTE: Old 10 digit date format is used
+ 
+ ==== Code information used to build this binary ====
+ Binary name ....: lmparbin
+ 
+ Library name ......: lm_f90
+ Tag name ..........: V5_0
+ Checkin-Date ......: 2013-11-08 08:58:35
+ Checkout-Date .....: 2013-11-08 10:45:42
+ Code is modified ..: .true.
+ Compile-Date ......: 
+ Compiled by .......: uschaett
+ Compiled on .......: 
+ 
+ Macros defined .: 
+ Macros undefined: 
+ Debug options ..: 
+ 
+ Current start time : 2020-09-25 07:49
+ Running on machine : 
+ Running on nodes ..: 
+ Data decomposition : 
+ ==== End of code information ====
+ 
+     INPUT OF THE NAMELISTS FOR DYNAMICS
+   DOMAIN SIZE (approx.) in m: L_x =    4634339.77780689     
+                               L_y =    3237000.66158717     
+     INPUT OF THE NAMELISTS FOR PHYSICS
+   *** WARNING: Own specifications of soil main levels are used *** 
+   ***          These have to correspond to the levels  of the  *** 
+   ***          coarse grid model!                              *** 
+     INPUT OF THE NAMELISTS FOR DIAGNOSTICS
+  WARNING  *** nincgp is set to 1 hour *** 
+     INPUT OF THE NAMELISTS FOR GRIB-IO
+ 
+   *** WARNING: Horizontal diffusion specified but lhordiff=F or hd_corr_trcr_xx
+ =0***
+   (Your specification: itype_diff is not respected for QV)
+ 
+ 
+   *** WARNING: Horizontal diffusion specified but lhordiff=F or hd_corr_trcr_xx
+ =0***
+   (Your specification: itype_diff is not respected for QC)
+ 
+     ALLOCATE SPACE
+   hd_mask - SETUP: i_west  =           58
+   hd_mask - SETUP: i_east  =          474
+   hd_mask - SETUP: j_south =           58
+   hd_mask - SETUP: j_north =          304
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/laf2008071400.nc
+ CLOSING ncdf FILE
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008071400.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008071403.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out01/lffd2008071400c.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out02/lffd2008071400c.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out03/lffd2008071400c.nc
+ CLOSING ncdf FILE
+  
+   The tracers currently handled in the model are:
+      ============================================
+  
+       #1......KEY.......  .............VALUE............  ....TYPE....
+       NAME                                          'QV'  STRING                
+       PARENT                          'organize_physics'  STRING                
+       UNITS                                    'kg kg-1'  STRING                
+       NC_STDNAME                     'specific_humidity'  STRING                
+       NC_LONGNAME                    'specific humidity'  STRING                
+       GRB_PARAM                                       51  INTEGER               
+       GRB_TABLE                                        1  INTEGER               
+       ADV                                              1  INTEGER               
+       DIFF                                             0  INTEGER               
+       TURB                                             1  INTEGER               
+       CONV                                             0  INTEGER               
+       INI                                              1  INTEGER               
+       LBC                                              1  INTEGER               
+       BBC                                              2  INTEGER               
+       RELAX                                            1  INTEGER               
+       DAMP                                             1  INTEGER               
+       CLP                                              1  INTEGER               
+       ADD_CLP_ADV                                  FALSE  LOGICAL               
+       BD_0GRAD_FORCED                              FALSE  LOGICAL               
+       BD_SET_FORCED                                    0  INTEGER               
+       MASSFLX_CLP                                   TRUE  LOGICAL               
+       DAMP_FORCED                                  FALSE  LOGICAL               
+       SURF_FIELD                                          POINTER               
+                                                                                     
+       #2......KEY.......  .............VALUE............  ....TYPE....
+       NAME                                          'QC'  STRING                
+       PARENT                          'organize_physics'  STRING                
+       UNITS                                    'kg kg-1'  STRING                
+       NC_STDNAME          'mass_fraction_of_cloud_liquid  STRING                
+       NC_LONGNAME         'specific cloud liquid water c  STRING                
+       GRB_PARAM                                       31  INTEGER               
+       GRB_TABLE                                        2  INTEGER               
+       ADV                                              1  INTEGER               
+       DIFF                                             0  INTEGER               
+       TURB                                             1  INTEGER               
+       CONV                                             0  INTEGER               
+       INI                                              1  INTEGER               
+       LBC                                              1  INTEGER               
+       BBC                                              0  INTEGER               
+       RELAX                                            1  INTEGER               
+       DAMP                                             1  INTEGER               
+       CLP                                              1  INTEGER               
+       ADD_CLP_ADV                                  FALSE  LOGICAL               
+       BD_0GRAD_FORCED                              FALSE  LOGICAL               
+       BD_SET_FORCED                                    0  INTEGER               
+       MASSFLX_CLP                                   TRUE  LOGICAL               
+       DAMP_FORCED                                  FALSE  LOGICAL               
+       SURF_FIELD                                          POINTER               
+                                                                                     
+       #3......KEY.......  .............VALUE............  ....TYPE....
+       NAME                                          'QI'  STRING                
+       PARENT                          'organize_physics'  STRING                
+       UNITS                                    'kg kg-1'  STRING                
+       NC_STDNAME          'mass_fraction_of_cloud_ice_in  STRING                
+       NC_LONGNAME           'specific cloud ice content'  STRING                
+       GRB_PARAM                                       33  INTEGER               
+       GRB_TABLE                                        2  INTEGER               
+       ADV                                              1  INTEGER               
+       DIFF                                             0  INTEGER               
+       TURB                                             1  INTEGER               
+       CONV                                             0  INTEGER               
+       INI                                              0  INTEGER               
+       LBC                                              0  INTEGER               
+       BBC                                              0  INTEGER               
+       RELAX                                            1  INTEGER               
+       DAMP                                             1  INTEGER               
+       CLP                                              1  INTEGER               
+       ADD_CLP_ADV                                  FALSE  LOGICAL               
+       BD_0GRAD_FORCED                               TRUE  LOGICAL               
+       BD_SET_FORCED                                    0  INTEGER               
+       MASSFLX_CLP                                  FALSE  LOGICAL               
+       DAMP_FORCED                                  FALSE  LOGICAL               
+       SURF_FIELD                                          POINTER               
+                                                                                     
+       #4......KEY.......  .............VALUE............  ....TYPE....
+       NAME                                          'QR'  STRING                
+       PARENT                          'organize_physics'  STRING                
+       UNITS                                    'kg kg-1'  STRING                
+       NC_STDNAME          'mass_fraction_of_rain_in_air'  STRING                
+       NC_LONGNAME                'specific rain content'  STRING                
+       GRB_PARAM                                       35  INTEGER               
+       GRB_TABLE                                        2  INTEGER               
+       ADV                                              1  INTEGER               
+       DIFF                                             0  INTEGER               
+       TURB                                             0  INTEGER               
+       CONV                                             0  INTEGER               
+       INI                                              0  INTEGER               
+       LBC                                              3  INTEGER               
+       BBC                                              0  INTEGER               
+       RELAX                                            0  INTEGER               
+       DAMP                                             0  INTEGER               
+       CLP                                              1  INTEGER               
+       ADD_CLP_ADV                                   TRUE  LOGICAL               
+       BD_0GRAD_FORCED                               TRUE  LOGICAL               
+       BD_SET_FORCED                                    1  INTEGER               
+       MASSFLX_CLP                                  FALSE  LOGICAL               
+       DAMP_FORCED                                  FALSE  LOGICAL               
+       SURF_FIELD                                          POINTER               
+                                                                                     
+       #5......KEY.......  .............VALUE............  ....TYPE....
+       NAME                                          'QS'  STRING                
+       PARENT                          'organize_physics'  STRING                
+       UNITS                                    'kg kg-1'  STRING                
+       NC_STDNAME          'mass_fraction_of_snow_in_air'  STRING                
+       NC_LONGNAME                'specific snow content'  STRING                
+       GRB_PARAM                                       36  INTEGER               
+       GRB_TABLE                                        2  INTEGER               
+       ADV                                              1  INTEGER               
+       DIFF                                             0  INTEGER               
+       TURB                                             0  INTEGER               
+       CONV                                             0  INTEGER               
+       INI                                              0  INTEGER               
+       LBC                                              3  INTEGER               
+       BBC                                              0  INTEGER               
+       RELAX                                            0  INTEGER               
+       DAMP                                             0  INTEGER               
+       CLP                                              1  INTEGER               
+       ADD_CLP_ADV                                   TRUE  LOGICAL               
+       BD_0GRAD_FORCED                               TRUE  LOGICAL               
+       BD_SET_FORCED                                    1  INTEGER               
+       MASSFLX_CLP                                  FALSE  LOGICAL               
+       DAMP_FORCED                                  FALSE  LOGICAL               
+       SURF_FIELD                                          POINTER               
+                                                                                     
+  
+   INITIALIZATIONS
+     INITIALIZATIONS for DYNAMICS and RELAXATION
+  Minimum horizontal grid spacing (dx, dy):    8817.42100181064     
+   9118.31172278076     
+  Minimum vertical   grid spacing (dz)    :    20.0000000000000     
+  Value of big time step used    :    60.0000000000000     
+ Subr.[init_grid_metrics] ...
+  
+  Damping coefficients in Rayleigh damping layer
+  level   height    damping coefficient
+     1    21750.00      0.163970
+     2    19950.00      0.144962
+     3    18325.00      0.115482
+     4    16850.00      0.083333
+     5    15525.00      0.054307
+     6    14350.00      0.031501
+     7    13292.50      0.015296
+     8    12330.00      0.005258
+     9    11447.50      0.000601
+  
+     Lowest Level with Rayleigh-damping:            9
+  
+     PHYSICAL PACKAGES
+ *****************************************************
+ *   Radiative transfer calculations employ data     *
+ *        provided in routine rad_aibi               *
+ *****************************************************
+     INITIALIZE CONTROL VARIABLES AND MEAN VALUES
+   TIME STEPPING
+ CS=   348.928160417572       DT=   60.0000000000000       DTSMAX=
+   16.3492290186082     
+ SHORT TIME STEP of 1. RK step    10.0000000000000      , number of steps: 
+           2
+ SHORT TIME STEP of 2. RK step    10.0000000000000      , number of steps: 
+           3
+ SHORT TIME STEP of 3. RK step    10.0000000000000      , number of steps: 
+           6
+ ismtstep_sum =           11  ismtstep_max =            6
+  LEVELINDEX WHERE LEVELS BECOME FLAT, KFLAT =            9
+  BETA_SW  =   0.400000000000000       BETA_GW  =   0.400000000000000     
+  BETA2_SW =   0.400000000000000       BETA2_GW =   0.400000000000000     
+  XKD =   0.100000000000000     
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out01/lffd2008071400.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out02/lffd2008071400.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out03/lffd2008071400p.nc
+ CLOSING ncdf FILE
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   PID 406235 RUNNING AT intel-wang-1
+=   EXIT CODE: 6
+=   CLEANING UP REMAINING PROCESSES
+=   YOU CAN IGNORE THE BELOW CLEANUP MESSAGES
+===================================================================================
+   Intel(R) MPI Library troubleshooting guide:
+      https://software.intel.com/node/561764
+===================================================================================
+------------------------------- start CCLM -------------------------------
+   SETUP OF THE LM
+     INITIALIZATIONS 
+        Info about KIND-parameters:   iintegers / MPI_INT =            4
+  1275069467
+                                      int_ga    / MPI_INT =            4
+  1275069467
+     INPUT OF THE NAMELISTS
+  *** NOTE: Old 10 digit date format is used
+ 
+ ==== Code information used to build this binary ====
+ Binary name ....: lmparbin
+ 
+ Library name ......: lm_f90
+ Tag name ..........: V5_0
+ Checkin-Date ......: 2013-11-08 08:58:35
+ Checkout-Date .....: 2013-11-08 10:45:42
+ Code is modified ..: .true.
+ Compile-Date ......: 
+ Compiled by .......: uschaett
+ Compiled on .......: 
+ 
+ Macros defined .: 
+ Macros undefined: 
+ Debug options ..: 
+ 
+ Current start time : 2020-09-25 07:55
+ Running on machine : 
+ Running on nodes ..: 
+ Data decomposition : 
+ ==== End of code information ====
+ 
+     INPUT OF THE NAMELISTS FOR DYNAMICS
+   DOMAIN SIZE (approx.) in m: L_x =    4634339.77780689     
+                               L_y =    3237000.66158717     
+     INPUT OF THE NAMELISTS FOR PHYSICS
+   *** WARNING: Own specifications of soil main levels are used *** 
+   ***          These have to correspond to the levels  of the  *** 
+   ***          coarse grid model!                              *** 
+     INPUT OF THE NAMELISTS FOR DIAGNOSTICS
+  WARNING  *** nincgp is set to 1 hour *** 
+     INPUT OF THE NAMELISTS FOR GRIB-IO
+ 
+   *** WARNING: Horizontal diffusion specified but lhordiff=F or hd_corr_trcr_xx
+ =0***
+   (Your specification: itype_diff is not respected for QV)
+ 
+ 
+   *** WARNING: Horizontal diffusion specified but lhordiff=F or hd_corr_trcr_xx
+ =0***
+   (Your specification: itype_diff is not respected for QC)
+ 
+     ALLOCATE SPACE
+   hd_mask - SETUP: i_west  =           58
+   hd_mask - SETUP: i_east  =          474
+   hd_mask - SETUP: j_south =           58
+   hd_mask - SETUP: j_north =          304
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/laf2008071400.nc
+ CLOSING ncdf FILE
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008071400.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008071403.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out01/lffd2008071400c.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out02/lffd2008071400c.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out03/lffd2008071400c.nc
+ CLOSING ncdf FILE
+  
+   The tracers currently handled in the model are:
+      ============================================
+  
+       #1......KEY.......  .............VALUE............  ....TYPE....
+       NAME                                          'QV'  STRING                
+       PARENT                          'organize_physics'  STRING                
+       UNITS                                    'kg kg-1'  STRING                
+       NC_STDNAME                     'specific_humidity'  STRING                
+       NC_LONGNAME                    'specific humidity'  STRING                
+       GRB_PARAM                                       51  INTEGER               
+       GRB_TABLE                                        1  INTEGER               
+       ADV                                              1  INTEGER               
+       DIFF                                             0  INTEGER               
+       TURB                                             1  INTEGER               
+       CONV                                             0  INTEGER               
+       INI                                              1  INTEGER               
+       LBC                                              1  INTEGER               
+       BBC                                              2  INTEGER               
+       RELAX                                            1  INTEGER               
+       DAMP                                             1  INTEGER               
+       CLP                                              1  INTEGER               
+       ADD_CLP_ADV                                  FALSE  LOGICAL               
+       BD_0GRAD_FORCED                              FALSE  LOGICAL               
+       BD_SET_FORCED                                    0  INTEGER               
+       MASSFLX_CLP                                   TRUE  LOGICAL               
+       DAMP_FORCED                                  FALSE  LOGICAL               
+       SURF_FIELD                                          POINTER               
+                                                                                     
+       #2......KEY.......  .............VALUE............  ....TYPE....
+       NAME                                          'QC'  STRING                
+       PARENT                          'organize_physics'  STRING                
+       UNITS                                    'kg kg-1'  STRING                
+       NC_STDNAME          'mass_fraction_of_cloud_liquid  STRING                
+       NC_LONGNAME         'specific cloud liquid water c  STRING                
+       GRB_PARAM                                       31  INTEGER               
+       GRB_TABLE                                        2  INTEGER               
+       ADV                                              1  INTEGER               
+       DIFF                                             0  INTEGER               
+       TURB                                             1  INTEGER               
+       CONV                                             0  INTEGER               
+       INI                                              1  INTEGER               
+       LBC                                              1  INTEGER               
+       BBC                                              0  INTEGER               
+       RELAX                                            1  INTEGER               
+       DAMP                                             1  INTEGER               
+       CLP                                              1  INTEGER               
+       ADD_CLP_ADV                                  FALSE  LOGICAL               
+       BD_0GRAD_FORCED                              FALSE  LOGICAL               
+       BD_SET_FORCED                                    0  INTEGER               
+       MASSFLX_CLP                                   TRUE  LOGICAL               
+       DAMP_FORCED                                  FALSE  LOGICAL               
+       SURF_FIELD                                          POINTER               
+                                                                                     
+       #3......KEY.......  .............VALUE............  ....TYPE....
+       NAME                                          'QI'  STRING                
+       PARENT                          'organize_physics'  STRING                
+       UNITS                                    'kg kg-1'  STRING                
+       NC_STDNAME          'mass_fraction_of_cloud_ice_in  STRING                
+       NC_LONGNAME           'specific cloud ice content'  STRING                
+       GRB_PARAM                                       33  INTEGER               
+       GRB_TABLE                                        2  INTEGER               
+       ADV                                              1  INTEGER               
+       DIFF                                             0  INTEGER               
+       TURB                                             1  INTEGER               
+       CONV                                             0  INTEGER               
+       INI                                              0  INTEGER               
+       LBC                                              0  INTEGER               
+       BBC                                              0  INTEGER               
+       RELAX                                            1  INTEGER               
+       DAMP                                             1  INTEGER               
+       CLP                                              1  INTEGER               
+       ADD_CLP_ADV                                  FALSE  LOGICAL               
+       BD_0GRAD_FORCED                               TRUE  LOGICAL               
+       BD_SET_FORCED                                    0  INTEGER               
+       MASSFLX_CLP                                  FALSE  LOGICAL               
+       DAMP_FORCED                                  FALSE  LOGICAL               
+       SURF_FIELD                                          POINTER               
+                                                                                     
+       #4......KEY.......  .............VALUE............  ....TYPE....
+       NAME                                          'QR'  STRING                
+       PARENT                          'organize_physics'  STRING                
+       UNITS                                    'kg kg-1'  STRING                
+       NC_STDNAME          'mass_fraction_of_rain_in_air'  STRING                
+       NC_LONGNAME                'specific rain content'  STRING                
+       GRB_PARAM                                       35  INTEGER               
+       GRB_TABLE                                        2  INTEGER               
+       ADV                                              1  INTEGER               
+       DIFF                                             0  INTEGER               
+       TURB                                             0  INTEGER               
+       CONV                                             0  INTEGER               
+       INI                                              0  INTEGER               
+       LBC                                              3  INTEGER               
+       BBC                                              0  INTEGER               
+       RELAX                                            0  INTEGER               
+       DAMP                                             0  INTEGER               
+       CLP                                              1  INTEGER               
+       ADD_CLP_ADV                                   TRUE  LOGICAL               
+       BD_0GRAD_FORCED                               TRUE  LOGICAL               
+       BD_SET_FORCED                                    1  INTEGER               
+       MASSFLX_CLP                                  FALSE  LOGICAL               
+       DAMP_FORCED                                  FALSE  LOGICAL               
+       SURF_FIELD                                          POINTER               
+                                                                                     
+       #5......KEY.......  .............VALUE............  ....TYPE....
+       NAME                                          'QS'  STRING                
+       PARENT                          'organize_physics'  STRING                
+       UNITS                                    'kg kg-1'  STRING                
+       NC_STDNAME          'mass_fraction_of_snow_in_air'  STRING                
+       NC_LONGNAME                'specific snow content'  STRING                
+       GRB_PARAM                                       36  INTEGER               
+       GRB_TABLE                                        2  INTEGER               
+       ADV                                              1  INTEGER               
+       DIFF                                             0  INTEGER               
+       TURB                                             0  INTEGER               
+       CONV                                             0  INTEGER               
+       INI                                              0  INTEGER               
+       LBC                                              3  INTEGER               
+       BBC                                              0  INTEGER               
+       RELAX                                            0  INTEGER               
+       DAMP                                             0  INTEGER               
+       CLP                                              1  INTEGER               
+       ADD_CLP_ADV                                   TRUE  LOGICAL               
+       BD_0GRAD_FORCED                               TRUE  LOGICAL               
+       BD_SET_FORCED                                    1  INTEGER               
+       MASSFLX_CLP                                  FALSE  LOGICAL               
+       DAMP_FORCED                                  FALSE  LOGICAL               
+       SURF_FIELD                                          POINTER               
+                                                                                     
+  
+   INITIALIZATIONS
+     INITIALIZATIONS for DYNAMICS and RELAXATION
+  Minimum horizontal grid spacing (dx, dy):    8817.42100181064     
+   9118.31172278076     
+  Minimum vertical   grid spacing (dz)    :    20.0000000000000     
+  Value of big time step used    :    60.0000000000000     
+ Subr.[init_grid_metrics] ...
+  
+  Damping coefficients in Rayleigh damping layer
+  level   height    damping coefficient
+     1    21750.00      0.163970
+     2    19950.00      0.144962
+     3    18325.00      0.115482
+     4    16850.00      0.083333
+     5    15525.00      0.054307
+     6    14350.00      0.031501
+     7    13292.50      0.015296
+     8    12330.00      0.005258
+     9    11447.50      0.000601
+  
+     Lowest Level with Rayleigh-damping:            9
+  
+     PHYSICAL PACKAGES
+ *****************************************************
+ *   Radiative transfer calculations employ data     *
+ *        provided in routine rad_aibi               *
+ *****************************************************
+     INITIALIZE CONTROL VARIABLES AND MEAN VALUES
+   TIME STEPPING
+ CS=   348.928160417572       DT=   60.0000000000000       DTSMAX=
+   16.3492290186082     
+ SHORT TIME STEP of 1. RK step    10.0000000000000      , number of steps: 
+           2
+ SHORT TIME STEP of 2. RK step    10.0000000000000      , number of steps: 
+           3
+ SHORT TIME STEP of 3. RK step    10.0000000000000      , number of steps: 
+           6
+ ismtstep_sum =           11  ismtstep_max =            6
+  LEVELINDEX WHERE LEVELS BECOME FLAT, KFLAT =            9
+  BETA_SW  =   0.400000000000000       BETA_GW  =   0.400000000000000     
+  BETA2_SW =   0.400000000000000       BETA2_GW =   0.400000000000000     
+  XKD =   0.100000000000000     
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out01/lffd2008071400.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out02/lffd2008071400.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out03/lffd2008071400p.nc
+ CLOSING ncdf FILE
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   PID 407451 RUNNING AT intel-wang-1
+=   EXIT CODE: 6
+=   CLEANING UP REMAINING PROCESSES
+=   YOU CAN IGNORE THE BELOW CLEANUP MESSAGES
+===================================================================================
+   Intel(R) MPI Library troubleshooting guide:
+      https://software.intel.com/node/561764
+===================================================================================
+Image              PC                Routine            Line        Source             
+libifcoremt.so.5   00002B88FA852794  for__signal_handl     Unknown  Unknown
+libpthread-2.17.s  00002B88FA3C45F0  Unknown               Unknown  Unknown
+cclm.exe           000000000045EA35  numeric_utilities        3906  numeric_utilities_rk.f90
+cclm.exe           00000000005C302A  src_advection_rka        2998  src_advection_rk.f90
+cclm.exe           00000000005C5608  src_advection_rka        2283  src_advection_rk.f90
+cclm.exe           00000000005BBB02  src_advection_rk_        1968  src_advection_rk.f90
+cclm.exe           000000000077580C  src_runge_kutta_m        1707  src_runge_kutta.f90
+cclm.exe           0000000000553A06  organize_dynamics         433  organize_dynamics.f90
+cclm.exe           000000000058C708  MAIN__                   1145  lmorg.f90
+cclm.exe           00000000004051EE  Unknown               Unknown  Unknown
+libc-2.17.so       00002B88FBD3C505  __libc_start_main     Unknown  Unknown
+cclm.exe           00000000004050F9  Unknown               Unknown  Unknown------------------------------- start CCLM -------------------------------
+   SETUP OF THE LM
+     INITIALIZATIONS 
+        Info about KIND-parameters:   iintegers / MPI_INT =            4
+  1275069467
+                                      int_ga    / MPI_INT =            4
+  1275069467
+     INPUT OF THE NAMELISTS
+  *** NOTE: Old 10 digit date format is used
+ 
+ ==== Code information used to build this binary ====
+ Binary name ....: lmparbin
+ 
+ Library name ......: lm_f90
+ Tag name ..........: V5_0
+ Checkin-Date ......: 2013-11-08 08:58:35
+ Checkout-Date .....: 2013-11-08 10:45:42
+ Code is modified ..: .true.
+ Compile-Date ......: 
+ Compiled by .......: uschaett
+ Compiled on .......: 
+ 
+ Macros defined .: 
+ Macros undefined: 
+ Debug options ..: 
+ 
+ Current start time : 2020-09-25 07:58
+ Running on machine : 
+ Running on nodes ..: 
+ Data decomposition : 
+ ==== End of code information ====
+ 
+     INPUT OF THE NAMELISTS FOR DYNAMICS
+   DOMAIN SIZE (approx.) in m: L_x =    4634339.77780689     
+                               L_y =    3237000.66158717     
+     INPUT OF THE NAMELISTS FOR PHYSICS
+   *** WARNING: Own specifications of soil main levels are used *** 
+   ***          These have to correspond to the levels  of the  *** 
+   ***          coarse grid model!                              *** 
+     INPUT OF THE NAMELISTS FOR DIAGNOSTICS
+  WARNING  *** nincgp is set to 1 hour *** 
+     INPUT OF THE NAMELISTS FOR GRIB-IO
+ 
+   *** WARNING: Horizontal diffusion specified but lhordiff=F or hd_corr_trcr_xx
+ =0***
+   (Your specification: itype_diff is not respected for QV)
+ 
+ 
+   *** WARNING: Horizontal diffusion specified but lhordiff=F or hd_corr_trcr_xx
+ =0***
+   (Your specification: itype_diff is not respected for QC)
+ 
+     ALLOCATE SPACE
+   hd_mask - SETUP: i_west  =           58
+   hd_mask - SETUP: i_east  =          474
+   hd_mask - SETUP: j_south =           58
+   hd_mask - SETUP: j_north =          304
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/laf2008071400.nc
+ soil layer     data file     namelist input
+       1         0.035         0.005
+       2         0.175         0.025
+       3         0.640         0.070
+       4         1.775         0.160
+ *------------------------------------------------------------*
+ *    PROGRAM TERMINATED BECAUSE OF ERRORS DETECTED
+ *              IN ROUTINE:   organize_input           
+ *
+ *    ERROR CODE is         8102
+ *    Error in multi soil layer heights
+ *------------------------------------------------------------*
+------------------------------- start CCLM -------------------------------
+   SETUP OF THE LM
+     INITIALIZATIONS 
+        Info about KIND-parameters:   iintegers / MPI_INT =            4
+  1275069467
+                                      int_ga    / MPI_INT =            4
+  1275069467
+     INPUT OF THE NAMELISTS
+  *** NOTE: Old 10 digit date format is used
+ 
+ ==== Code information used to build this binary ====
+ Binary name ....: lmparbin
+ 
+ Library name ......: lm_f90
+ Tag name ..........: V5_0
+ Checkin-Date ......: 2013-11-08 08:58:35
+ Checkout-Date .....: 2013-11-08 10:45:42
+ Code is modified ..: .true.
+ Compile-Date ......: 
+ Compiled by .......: uschaett
+ Compiled on .......: 
+ 
+ Macros defined .: 
+ Macros undefined: 
+ Debug options ..: 
+ 
+ Current start time : 2020-09-25 07:59
+ Running on machine : 
+ Running on nodes ..: 
+ Data decomposition : 
+ ==== End of code information ====
+ 
+     INPUT OF THE NAMELISTS FOR DYNAMICS
+   DOMAIN SIZE (approx.) in m: L_x =    4634339.77780689     
+                               L_y =    3237000.66158717     
+     INPUT OF THE NAMELISTS FOR PHYSICS
+   *** WARNING: Own specifications of soil main levels are used *** 
+   ***          These have to correspond to the levels  of the  *** 
+   ***          coarse grid model!                              *** 
+     INPUT OF THE NAMELISTS FOR DIAGNOSTICS
+  WARNING  *** nincgp is set to 1 hour *** 
+     INPUT OF THE NAMELISTS FOR GRIB-IO
+ 
+   *** WARNING: Horizontal diffusion specified but lhordiff=F or hd_corr_trcr_xx
+ =0***
+   (Your specification: itype_diff is not respected for QV)
+ 
+ 
+   *** WARNING: Horizontal diffusion specified but lhordiff=F or hd_corr_trcr_xx
+ =0***
+   (Your specification: itype_diff is not respected for QC)
+ 
+     ALLOCATE SPACE
+   hd_mask - SETUP: i_west  =           58
+   hd_mask - SETUP: i_east  =          474
+   hd_mask - SETUP: j_south =           58
+   hd_mask - SETUP: j_north =          304
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/laf2008071400.nc
+ CLOSING ncdf FILE
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008071400.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008071403.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out01/lffd2008071400c.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out02/lffd2008071400c.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out03/lffd2008071400c.nc
+ CLOSING ncdf FILE
+  
+   The tracers currently handled in the model are:
+      ============================================
+  
+       #1......KEY.......  .............VALUE............  ....TYPE....
+       NAME                                          'QV'  STRING                
+       PARENT                          'organize_physics'  STRING                
+       UNITS                                    'kg kg-1'  STRING                
+       NC_STDNAME                     'specific_humidity'  STRING                
+       NC_LONGNAME                    'specific humidity'  STRING                
+       GRB_PARAM                                       51  INTEGER               
+       GRB_TABLE                                        1  INTEGER               
+       ADV                                              1  INTEGER               
+       DIFF                                             0  INTEGER               
+       TURB                                             1  INTEGER               
+       CONV                                             0  INTEGER               
+       INI                                              1  INTEGER               
+       LBC                                              1  INTEGER               
+       BBC                                              2  INTEGER               
+       RELAX                                            1  INTEGER               
+       DAMP                                             1  INTEGER               
+       CLP                                              1  INTEGER               
+       ADD_CLP_ADV                                  FALSE  LOGICAL               
+       BD_0GRAD_FORCED                              FALSE  LOGICAL               
+       BD_SET_FORCED                                    0  INTEGER               
+       MASSFLX_CLP                                   TRUE  LOGICAL               
+       DAMP_FORCED                                  FALSE  LOGICAL               
+       SURF_FIELD                                          POINTER               
+                                                                                     
+       #2......KEY.......  .............VALUE............  ....TYPE....
+       NAME                                          'QC'  STRING                
+       PARENT                          'organize_physics'  STRING                
+       UNITS                                    'kg kg-1'  STRING                
+       NC_STDNAME          'mass_fraction_of_cloud_liquid  STRING                
+       NC_LONGNAME         'specific cloud liquid water c  STRING                
+       GRB_PARAM                                       31  INTEGER               
+       GRB_TABLE                                        2  INTEGER               
+       ADV                                              1  INTEGER               
+       DIFF                                             0  INTEGER               
+       TURB                                             1  INTEGER               
+       CONV                                             0  INTEGER               
+       INI                                              1  INTEGER               
+       LBC                                              1  INTEGER               
+       BBC                                              0  INTEGER               
+       RELAX                                            1  INTEGER               
+       DAMP                                             1  INTEGER               
+       CLP                                              1  INTEGER               
+       ADD_CLP_ADV                                  FALSE  LOGICAL               
+       BD_0GRAD_FORCED                              FALSE  LOGICAL               
+       BD_SET_FORCED                                    0  INTEGER               
+       MASSFLX_CLP                                   TRUE  LOGICAL               
+       DAMP_FORCED                                  FALSE  LOGICAL               
+       SURF_FIELD                                          POINTER               
+                                                                                     
+       #3......KEY.......  .............VALUE............  ....TYPE....
+       NAME                                          'QI'  STRING                
+       PARENT                          'organize_physics'  STRING                
+       UNITS                                    'kg kg-1'  STRING                
+       NC_STDNAME          'mass_fraction_of_cloud_ice_in  STRING                
+       NC_LONGNAME           'specific cloud ice content'  STRING                
+       GRB_PARAM                                       33  INTEGER               
+       GRB_TABLE                                        2  INTEGER               
+       ADV                                              1  INTEGER               
+       DIFF                                             0  INTEGER               
+       TURB                                             1  INTEGER               
+       CONV                                             0  INTEGER               
+       INI                                              0  INTEGER               
+       LBC                                              0  INTEGER               
+       BBC                                              0  INTEGER               
+       RELAX                                            1  INTEGER               
+       DAMP                                             1  INTEGER               
+       CLP                                              1  INTEGER               
+       ADD_CLP_ADV                                  FALSE  LOGICAL               
+       BD_0GRAD_FORCED                               TRUE  LOGICAL               
+       BD_SET_FORCED                                    0  INTEGER               
+       MASSFLX_CLP                                  FALSE  LOGICAL               
+       DAMP_FORCED                                  FALSE  LOGICAL               
+       SURF_FIELD                                          POINTER               
+                                                                                     
+       #4......KEY.......  .............VALUE............  ....TYPE....
+       NAME                                          'QR'  STRING                
+       PARENT                          'organize_physics'  STRING                
+       UNITS                                    'kg kg-1'  STRING                
+       NC_STDNAME          'mass_fraction_of_rain_in_air'  STRING                
+       NC_LONGNAME                'specific rain content'  STRING                
+       GRB_PARAM                                       35  INTEGER               
+       GRB_TABLE                                        2  INTEGER               
+       ADV                                              1  INTEGER               
+       DIFF                                             0  INTEGER               
+       TURB                                             0  INTEGER               
+       CONV                                             0  INTEGER               
+       INI                                              0  INTEGER               
+       LBC                                              3  INTEGER               
+       BBC                                              0  INTEGER               
+       RELAX                                            0  INTEGER               
+       DAMP                                             0  INTEGER               
+       CLP                                              1  INTEGER               
+       ADD_CLP_ADV                                   TRUE  LOGICAL               
+       BD_0GRAD_FORCED                               TRUE  LOGICAL               
+       BD_SET_FORCED                                    1  INTEGER               
+       MASSFLX_CLP                                  FALSE  LOGICAL               
+       DAMP_FORCED                                  FALSE  LOGICAL               
+       SURF_FIELD                                          POINTER               
+                                                                                     
+       #5......KEY.......  .............VALUE............  ....TYPE....
+       NAME                                          'QS'  STRING                
+       PARENT                          'organize_physics'  STRING                
+       UNITS                                    'kg kg-1'  STRING                
+       NC_STDNAME          'mass_fraction_of_snow_in_air'  STRING                
+       NC_LONGNAME                'specific snow content'  STRING                
+       GRB_PARAM                                       36  INTEGER               
+       GRB_TABLE                                        2  INTEGER               
+       ADV                                              1  INTEGER               
+       DIFF                                             0  INTEGER               
+       TURB                                             0  INTEGER               
+       CONV                                             0  INTEGER               
+       INI                                              0  INTEGER               
+       LBC                                              3  INTEGER               
+       BBC                                              0  INTEGER               
+       RELAX                                            0  INTEGER               
+       DAMP                                             0  INTEGER               
+       CLP                                              1  INTEGER               
+       ADD_CLP_ADV                                   TRUE  LOGICAL               
+       BD_0GRAD_FORCED                               TRUE  LOGICAL               
+       BD_SET_FORCED                                    1  INTEGER               
+       MASSFLX_CLP                                  FALSE  LOGICAL               
+       DAMP_FORCED                                  FALSE  LOGICAL               
+       SURF_FIELD                                          POINTER               
+                                                                                     
+  
+   INITIALIZATIONS
+     INITIALIZATIONS for DYNAMICS and RELAXATION
+  Minimum horizontal grid spacing (dx, dy):    8817.42100181064     
+   9118.31172278076     
+  Minimum vertical   grid spacing (dz)    :    20.0000000000000     
+  Value of big time step used    :    60.0000000000000     
+ Subr.[init_grid_metrics] ...
+  
+  Damping coefficients in Rayleigh damping layer
+  level   height    damping coefficient
+     1    21750.00      0.163970
+     2    19950.00      0.144962
+     3    18325.00      0.115482
+     4    16850.00      0.083333
+     5    15525.00      0.054307
+     6    14350.00      0.031501
+     7    13292.50      0.015296
+     8    12330.00      0.005258
+     9    11447.50      0.000601
+  
+     Lowest Level with Rayleigh-damping:            9
+  
+     PHYSICAL PACKAGES
+ *****************************************************
+ *   Radiative transfer calculations employ data     *
+ *        provided in routine rad_aibi               *
+ *****************************************************
+     INITIALIZE CONTROL VARIABLES AND MEAN VALUES
+   TIME STEPPING
+ CS=   348.928160417572       DT=   60.0000000000000       DTSMAX=
+   16.3492290186082     
+ SHORT TIME STEP of 1. RK step    10.0000000000000      , number of steps: 
+           2
+ SHORT TIME STEP of 2. RK step    10.0000000000000      , number of steps: 
+           3
+ SHORT TIME STEP of 3. RK step    10.0000000000000      , number of steps: 
+           6
+ ismtstep_sum =           11  ismtstep_max =            6
+  LEVELINDEX WHERE LEVELS BECOME FLAT, KFLAT =            9
+  BETA_SW  =   0.400000000000000       BETA_GW  =   0.400000000000000     
+  BETA2_SW =   0.400000000000000       BETA2_GW =   0.400000000000000     
+  XKD =   0.100000000000000     
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out01/lffd2008071400.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out02/lffd2008071400.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out03/lffd2008071400p.nc
+ CLOSING ncdf FILE
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   PID 407923 RUNNING AT intel-wang-1
+=   EXIT CODE: 6
+=   CLEANING UP REMAINING PROCESSES
+=   YOU CAN IGNORE THE BELOW CLEANUP MESSAGES
+===================================================================================
+   Intel(R) MPI Library troubleshooting guide:
+      https://software.intel.com/node/561764
+===================================================================================
+------------------------------- start CCLM -------------------------------
+   SETUP OF THE LM
+     INITIALIZATIONS 
+        Info about KIND-parameters:   iintegers / MPI_INT =            4
+  1275069467
+                                      int_ga    / MPI_INT =            4
+  1275069467
+     INPUT OF THE NAMELISTS
+  *** NOTE: Old 10 digit date format is used
+ 
+ ==== Code information used to build this binary ====
+ Binary name ....: lmparbin
+ 
+ Library name ......: lm_f90
+ Tag name ..........: V5_0
+ Checkin-Date ......: 2013-11-08 08:58:35
+ Checkout-Date .....: 2013-11-08 10:45:42
+ Code is modified ..: .true.
+ Compile-Date ......: 
+ Compiled by .......: uschaett
+ Compiled on .......: 
+ 
+ Macros defined .: 
+ Macros undefined: 
+ Debug options ..: 
+ 
+ Current start time : 2020-09-25 08:03
+ Running on machine : 
+ Running on nodes ..: 
+ Data decomposition : 
+ ==== End of code information ====
+ 
+     INPUT OF THE NAMELISTS FOR DYNAMICS
+   DOMAIN SIZE (approx.) in m: L_x =    4634339.77780689     
+                               L_y =    3237000.66158717     
+     INPUT OF THE NAMELISTS FOR PHYSICS
+  ERROR  *** wrong number of specifications for soil levels  ***            4
+           4
+ *------------------------------------------------------------*
+ *    PROGRAM TERMINATED BECAUSE OF ERRORS DETECTED
+ *              IN ROUTINE:   organize_physics: input
+ *
+ *    ERROR CODE is         2104
+ *    ERROR *** Wrong values occured in NAMELIST INPUT_PHY ***
+ *------------------------------------------------------------*
+------------------------------- start CCLM -------------------------------
+   SETUP OF THE LM
+     INITIALIZATIONS 
+        Info about KIND-parameters:   iintegers / MPI_INT =            4
+  1275069467
+                                      int_ga    / MPI_INT =            4
+  1275069467
+     INPUT OF THE NAMELISTS
+  *** NOTE: Old 10 digit date format is used
+ 
+ ==== Code information used to build this binary ====
+ Binary name ....: lmparbin
+ 
+ Library name ......: lm_f90
+ Tag name ..........: V5_0
+ Checkin-Date ......: 2013-11-08 08:58:35
+ Checkout-Date .....: 2013-11-08 10:45:42
+ Code is modified ..: .true.
+ Compile-Date ......: 
+ Compiled by .......: uschaett
+ Compiled on .......: 
+ 
+ Macros defined .: 
+ Macros undefined: 
+ Debug options ..: 
+ 
+ Current start time : 2020-09-25 08:03
+ Running on machine : 
+ Running on nodes ..: 
+ Data decomposition : 
+ ==== End of code information ====
+ 
+     INPUT OF THE NAMELISTS FOR DYNAMICS
+   DOMAIN SIZE (approx.) in m: L_x =    4634339.77780689     
+                               L_y =    3237000.66158717     
+     INPUT OF THE NAMELISTS FOR PHYSICS
+   *** WARNING: Own specifications of soil main levels are used *** 
+   ***          These have to correspond to the levels  of the  *** 
+   ***          coarse grid model!                              *** 
+     INPUT OF THE NAMELISTS FOR DIAGNOSTICS
+  WARNING  *** nincgp is set to 1 hour *** 
+     INPUT OF THE NAMELISTS FOR GRIB-IO
+ 
+   *** WARNING: Horizontal diffusion specified but lhordiff=F or hd_corr_trcr_xx
+ =0***
+   (Your specification: itype_diff is not respected for QV)
+ 
+ 
+   *** WARNING: Horizontal diffusion specified but lhordiff=F or hd_corr_trcr_xx
+ =0***
+   (Your specification: itype_diff is not respected for QC)
+ 
+     ALLOCATE SPACE
+   hd_mask - SETUP: i_west  =           58
+   hd_mask - SETUP: i_east  =          474
+   hd_mask - SETUP: j_south =           58
+   hd_mask - SETUP: j_north =          304
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/laf2008071400.nc
+ CLOSING ncdf FILE
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008071400.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008071403.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out01/lffd2008071400c.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out02/lffd2008071400c.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out03/lffd2008071400c.nc
+ CLOSING ncdf FILE
+  
+   The tracers currently handled in the model are:
+      ============================================
+  
+       #1......KEY.......  .............VALUE............  ....TYPE....
+       NAME                                          'QV'  STRING                
+       PARENT                          'organize_physics'  STRING                
+       UNITS                                    'kg kg-1'  STRING                
+       NC_STDNAME                     'specific_humidity'  STRING                
+       NC_LONGNAME                    'specific humidity'  STRING                
+       GRB_PARAM                                       51  INTEGER               
+       GRB_TABLE                                        1  INTEGER               
+       ADV                                              1  INTEGER               
+       DIFF                                             0  INTEGER               
+       TURB                                             1  INTEGER               
+       CONV                                             0  INTEGER               
+       INI                                              1  INTEGER               
+       LBC                                              1  INTEGER               
+       BBC                                              2  INTEGER               
+       RELAX                                            1  INTEGER               
+       DAMP                                             1  INTEGER               
+       CLP                                              1  INTEGER               
+       ADD_CLP_ADV                                  FALSE  LOGICAL               
+       BD_0GRAD_FORCED                              FALSE  LOGICAL               
+       BD_SET_FORCED                                    0  INTEGER               
+       MASSFLX_CLP                                   TRUE  LOGICAL               
+       DAMP_FORCED                                  FALSE  LOGICAL               
+       SURF_FIELD                                          POINTER               
+                                                                                     
+       #2......KEY.......  .............VALUE............  ....TYPE....
+       NAME                                          'QC'  STRING                
+       PARENT                          'organize_physics'  STRING                
+       UNITS                                    'kg kg-1'  STRING                
+       NC_STDNAME          'mass_fraction_of_cloud_liquid  STRING                
+       NC_LONGNAME         'specific cloud liquid water c  STRING                
+       GRB_PARAM                                       31  INTEGER               
+       GRB_TABLE                                        2  INTEGER               
+       ADV                                              1  INTEGER               
+       DIFF                                             0  INTEGER               
+       TURB                                             1  INTEGER               
+       CONV                                             0  INTEGER               
+       INI                                              1  INTEGER               
+       LBC                                              1  INTEGER               
+       BBC                                              0  INTEGER               
+       RELAX                                            1  INTEGER               
+       DAMP                                             1  INTEGER               
+       CLP                                              1  INTEGER               
+       ADD_CLP_ADV                                  FALSE  LOGICAL               
+       BD_0GRAD_FORCED                              FALSE  LOGICAL               
+       BD_SET_FORCED                                    0  INTEGER               
+       MASSFLX_CLP                                   TRUE  LOGICAL               
+       DAMP_FORCED                                  FALSE  LOGICAL               
+       SURF_FIELD                                          POINTER               
+                                                                                     
+       #3......KEY.......  .............VALUE............  ....TYPE....
+       NAME                                          'QI'  STRING                
+       PARENT                          'organize_physics'  STRING                
+       UNITS                                    'kg kg-1'  STRING                
+       NC_STDNAME          'mass_fraction_of_cloud_ice_in  STRING                
+       NC_LONGNAME           'specific cloud ice content'  STRING                
+       GRB_PARAM                                       33  INTEGER               
+       GRB_TABLE                                        2  INTEGER               
+       ADV                                              1  INTEGER               
+       DIFF                                             0  INTEGER               
+       TURB                                             1  INTEGER               
+       CONV                                             0  INTEGER               
+       INI                                              0  INTEGER               
+       LBC                                              0  INTEGER               
+       BBC                                              0  INTEGER               
+       RELAX                                            1  INTEGER               
+       DAMP                                             1  INTEGER               
+       CLP                                              1  INTEGER               
+       ADD_CLP_ADV                                  FALSE  LOGICAL               
+       BD_0GRAD_FORCED                               TRUE  LOGICAL               
+       BD_SET_FORCED                                    0  INTEGER               
+       MASSFLX_CLP                                  FALSE  LOGICAL               
+       DAMP_FORCED                                  FALSE  LOGICAL               
+       SURF_FIELD                                          POINTER               
+                                                                                     
+       #4......KEY.......  .............VALUE............  ....TYPE....
+       NAME                                          'QR'  STRING                
+       PARENT                          'organize_physics'  STRING                
+       UNITS                                    'kg kg-1'  STRING                
+       NC_STDNAME          'mass_fraction_of_rain_in_air'  STRING                
+       NC_LONGNAME                'specific rain content'  STRING                
+       GRB_PARAM                                       35  INTEGER               
+       GRB_TABLE                                        2  INTEGER               
+       ADV                                              1  INTEGER               
+       DIFF                                             0  INTEGER               
+       TURB                                             0  INTEGER               
+       CONV                                             0  INTEGER               
+       INI                                              0  INTEGER               
+       LBC                                              3  INTEGER               
+       BBC                                              0  INTEGER               
+       RELAX                                            0  INTEGER               
+       DAMP                                             0  INTEGER               
+       CLP                                              1  INTEGER               
+       ADD_CLP_ADV                                   TRUE  LOGICAL               
+       BD_0GRAD_FORCED                               TRUE  LOGICAL               
+       BD_SET_FORCED                                    1  INTEGER               
+       MASSFLX_CLP                                  FALSE  LOGICAL               
+       DAMP_FORCED                                  FALSE  LOGICAL               
+       SURF_FIELD                                          POINTER               
+                                                                                     
+       #5......KEY.......  .............VALUE............  ....TYPE....
+       NAME                                          'QS'  STRING                
+       PARENT                          'organize_physics'  STRING                
+       UNITS                                    'kg kg-1'  STRING                
+       NC_STDNAME          'mass_fraction_of_snow_in_air'  STRING                
+       NC_LONGNAME                'specific snow content'  STRING                
+       GRB_PARAM                                       36  INTEGER               
+       GRB_TABLE                                        2  INTEGER               
+       ADV                                              1  INTEGER               
+       DIFF                                             0  INTEGER               
+       TURB                                             0  INTEGER               
+       CONV                                             0  INTEGER               
+       INI                                              0  INTEGER               
+       LBC                                              3  INTEGER               
+       BBC                                              0  INTEGER               
+       RELAX                                            0  INTEGER               
+       DAMP                                             0  INTEGER               
+       CLP                                              1  INTEGER               
+       ADD_CLP_ADV                                   TRUE  LOGICAL               
+       BD_0GRAD_FORCED                               TRUE  LOGICAL               
+       BD_SET_FORCED                                    1  INTEGER               
+       MASSFLX_CLP                                  FALSE  LOGICAL               
+       DAMP_FORCED                                  FALSE  LOGICAL               
+       SURF_FIELD                                          POINTER               
+                                                                                     
+  
+   INITIALIZATIONS
+     INITIALIZATIONS for DYNAMICS and RELAXATION
+  Minimum horizontal grid spacing (dx, dy):    8817.42100181064     
+   9118.31172278076     
+  Minimum vertical   grid spacing (dz)    :    20.0000000000000     
+  Value of big time step used    :    60.0000000000000     
+ Subr.[init_grid_metrics] ...
+  
+  Damping coefficients in Rayleigh damping layer
+  level   height    damping coefficient
+     1    21750.00      0.163970
+     2    19950.00      0.144962
+     3    18325.00      0.115482
+     4    16850.00      0.083333
+     5    15525.00      0.054307
+     6    14350.00      0.031501
+     7    13292.50      0.015296
+     8    12330.00      0.005258
+     9    11447.50      0.000601
+  
+     Lowest Level with Rayleigh-damping:            9
+  
+     PHYSICAL PACKAGES
+ *****************************************************
+ *   Radiative transfer calculations employ data     *
+ *        provided in routine rad_aibi               *
+ *****************************************************
+     INITIALIZE CONTROL VARIABLES AND MEAN VALUES
+   TIME STEPPING
+ CS=   348.928160417572       DT=   60.0000000000000       DTSMAX=
+   16.3492290186082     
+ SHORT TIME STEP of 1. RK step    10.0000000000000      , number of steps: 
+           2
+ SHORT TIME STEP of 2. RK step    10.0000000000000      , number of steps: 
+           3
+ SHORT TIME STEP of 3. RK step    10.0000000000000      , number of steps: 
+           6
+ ismtstep_sum =           11  ismtstep_max =            6
+  LEVELINDEX WHERE LEVELS BECOME FLAT, KFLAT =            9
+  BETA_SW  =   0.400000000000000       BETA_GW  =   0.400000000000000     
+  BETA2_SW =   0.400000000000000       BETA2_GW =   0.400000000000000     
+  XKD =   0.100000000000000     
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out01/lffd2008071400.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out02/lffd2008071400.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out03/lffd2008071400p.nc
+ CLOSING ncdf FILE
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   PID 408447 RUNNING AT intel-wang-1
+=   EXIT CODE: 6
+=   CLEANING UP REMAINING PROCESSES
+=   YOU CAN IGNORE THE BELOW CLEANUP MESSAGES
+===================================================================================
+   Intel(R) MPI Library troubleshooting guide:
+      https://software.intel.com/node/561764
+===================================================================================
+------------------------------- start CCLM -------------------------------
+   SETUP OF THE LM
+     INITIALIZATIONS 
+        Info about KIND-parameters:   iintegers / MPI_INT =            4
+  1275069467
+                                      int_ga    / MPI_INT =            4
+  1275069467
+     INPUT OF THE NAMELISTS
+  *** NOTE: Old 10 digit date format is used
+ 
+ ==== Code information used to build this binary ====
+ Binary name ....: lmparbin
+ 
+ Library name ......: lm_f90
+ Tag name ..........: V5_0
+ Checkin-Date ......: 2013-11-08 08:58:35
+ Checkout-Date .....: 2013-11-08 10:45:42
+ Code is modified ..: .true.
+ Compile-Date ......: 
+ Compiled by .......: uschaett
+ Compiled on .......: 
+ 
+ Macros defined .: 
+ Macros undefined: 
+ Debug options ..: 
+ 
+ Current start time : 2020-09-25 08:06
+ Running on machine : 
+ Running on nodes ..: 
+ Data decomposition : 
+ ==== End of code information ====
+ 
+     INPUT OF THE NAMELISTS FOR DYNAMICS
+   DOMAIN SIZE (approx.) in m: L_x =    4634339.77780689     
+                               L_y =    3237000.66158717     
+     INPUT OF THE NAMELISTS FOR PHYSICS
+   *** WARNING: Own specifications of soil main levels are used *** 
+   ***          These have to correspond to the levels  of the  *** 
+   ***          coarse grid model!                              *** 
+     INPUT OF THE NAMELISTS FOR DIAGNOSTICS
+  WARNING  *** nincgp is set to 1 hour *** 
+     INPUT OF THE NAMELISTS FOR GRIB-IO
+ 
+   *** WARNING: Horizontal diffusion specified but lhordiff=F or hd_corr_trcr_xx
+ =0***
+   (Your specification: itype_diff is not respected for QV)
+ 
+ 
+   *** WARNING: Horizontal diffusion specified but lhordiff=F or hd_corr_trcr_xx
+ =0***
+   (Your specification: itype_diff is not respected for QC)
+ 
+     ALLOCATE SPACE
+   hd_mask - SETUP: i_west  =           58
+   hd_mask - SETUP: i_east  =          474
+   hd_mask - SETUP: j_south =           58
+   hd_mask - SETUP: j_north =          304
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/laf2008071400.nc
+ CLOSING ncdf FILE
+   *** Not all variables / levels could be read for initial data   ***
+   *** The following levels are missing:    *** 
+            T_ICE           , level:             1     F
+            H_ICE           , level:             1     F
+ *------------------------------------------------------------*
+ *------------------------------------------------------------*
+ *    PROGRAM TERMINATED BECAUSE OF ERRORS DETECTED
+ *              IN ROUTINE:   organize_input           
+ *
+ *    ERROR CODE is         2004
+ *    Not all data available
+ *------------------------------------------------------------*
+ *------------------------------------------------------------*
+ *    PROGRAM TERMINATED BECAUSE OF ERRORS DETECTED
+ *              IN ROUTINE:   organize_input           
+ *
+ *    ERROR CODE is         2004
+ *    Not all data available
+ *------------------------------------------------------------*
+ *------------------------------------------------------------*
+ *    PROGRAM TERMINATED BECAUSE OF ERRORS DETECTED
+ *              IN ROUTINE:   organize_input           
+ *
+ *    ERROR CODE is         2004
+ *    Not all data available
+ *------------------------------------------------------------*
+------------------------------- start CCLM -------------------------------
+   SETUP OF THE LM
+     INITIALIZATIONS 
+        Info about KIND-parameters:   iintegers / MPI_INT =            4
+  1275069467
+                                      int_ga    / MPI_INT =            4
+  1275069467
+     INPUT OF THE NAMELISTS
+  *** NOTE: Old 10 digit date format is used
+ 
+ ==== Code information used to build this binary ====
+ Binary name ....: lmparbin
+ 
+ Library name ......: lm_f90
+ Tag name ..........: V5_0
+ Checkin-Date ......: 2013-11-08 08:58:35
+ Checkout-Date .....: 2013-11-08 10:45:42
+ Code is modified ..: .true.
+ Compile-Date ......: 
+ Compiled by .......: uschaett
+ Compiled on .......: 
+ 
+ Macros defined .: 
+ Macros undefined: 
+ Debug options ..: 
+ 
+ Current start time : 2020-09-25 08:07
+ Running on machine : 
+ Running on nodes ..: 
+ Data decomposition : 
+ ==== End of code information ====
+ 
+     INPUT OF THE NAMELISTS FOR DYNAMICS
+   DOMAIN SIZE (approx.) in m: L_x =    4634339.77780689     
+                               L_y =    3237000.66158717     
+     INPUT OF THE NAMELISTS FOR PHYSICS
+   *** WARNING: Own specifications of soil main levels are used *** 
+   ***          These have to correspond to the levels  of the  *** 
+   ***          coarse grid model!                              *** 
+     INPUT OF THE NAMELISTS FOR DIAGNOSTICS
+  WARNING  *** nincgp is set to 1 hour *** 
+     INPUT OF THE NAMELISTS FOR GRIB-IO
+ 
+   *** WARNING: Horizontal diffusion specified but lhordiff=F or hd_corr_trcr_xx
+ =0***
+   (Your specification: itype_diff is not respected for QV)
+ 
+ 
+   *** WARNING: Horizontal diffusion specified but lhordiff=F or hd_corr_trcr_xx
+ =0***
+   (Your specification: itype_diff is not respected for QC)
+ 
+     ALLOCATE SPACE
+   hd_mask - SETUP: i_west  =           58
+   hd_mask - SETUP: i_east  =          474
+   hd_mask - SETUP: j_south =           58
+   hd_mask - SETUP: j_north =          304
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/laf2008071400.nc
+ CLOSING ncdf FILE
+   *** Not all variables / levels could be read for initial data   ***
+   *** The following levels are missing:    *** 
+            T_ICE           , level:             1     F
+            H_ICE           , level:             1     F
+ *------------------------------------------------------------*
+ *    PROGRAM TERMINATED BECAUSE OF ERRORS DETECTED
+ *              IN ROUTINE:   organize_input           
+ *
+ *    ERROR CODE is         2004
+ *    Not all data available
+ *------------------------------------------------------------*
+ *------------------------------------------------------------*
+ *    PROGRAM TERMINATED BECAUSE OF ERRORS DETECTED
+ *              IN ROUTINE:   organize_input           
+ *
+ *    ERROR CODE is         2004
+ *    Not all data available
+ *------------------------------------------------------------*
+------------------------------- start CCLM -------------------------------
+   SETUP OF THE LM
+     INITIALIZATIONS 
+        Info about KIND-parameters:   iintegers / MPI_INT =            4
+  1275069467
+                                      int_ga    / MPI_INT =            4
+  1275069467
+     INPUT OF THE NAMELISTS
+  *** NOTE: Old 10 digit date format is used
+ 
+ ==== Code information used to build this binary ====
+ Binary name ....: lmparbin
+ 
+ Library name ......: lm_f90
+ Tag name ..........: V5_0
+ Checkin-Date ......: 2013-11-08 08:58:35
+ Checkout-Date .....: 2013-11-08 10:45:42
+ Code is modified ..: .true.
+ Compile-Date ......: 
+ Compiled by .......: uschaett
+ Compiled on .......: 
+ 
+ Macros defined .: 
+ Macros undefined: 
+ Debug options ..: 
+ 
+ Current start time : 2020-09-25 08:08
+ Running on machine : 
+ Running on nodes ..: 
+ Data decomposition : 
+ ==== End of code information ====
+ 
+     INPUT OF THE NAMELISTS FOR DYNAMICS
+   DOMAIN SIZE (approx.) in m: L_x =    4634339.77780689     
+                               L_y =    3237000.66158717     
+     INPUT OF THE NAMELISTS FOR PHYSICS
+   *** WARNING: Own specifications of soil main levels are used *** 
+   ***          These have to correspond to the levels  of the  *** 
+   ***          coarse grid model!                              *** 
+     INPUT OF THE NAMELISTS FOR DIAGNOSTICS
+  WARNING  *** nincgp is set to 1 hour *** 
+     INPUT OF THE NAMELISTS FOR GRIB-IO
+ 
+   *** WARNING: Horizontal diffusion specified but lhordiff=F or hd_corr_trcr_xx
+ =0***
+   (Your specification: itype_diff is not respected for QV)
+ 
+ 
+   *** WARNING: Horizontal diffusion specified but lhordiff=F or hd_corr_trcr_xx
+ =0***
+   (Your specification: itype_diff is not respected for QC)
+ 
+     ALLOCATE SPACE
+   hd_mask - SETUP: i_west  =           58
+   hd_mask - SETUP: i_east  =          474
+   hd_mask - SETUP: j_south =           58
+   hd_mask - SETUP: j_north =          304
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/laf2008071400.nc
+ CLOSING ncdf FILE
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008071400.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008071403.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out01/lffd2008071400c.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out02/lffd2008071400c.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out03/lffd2008071400c.nc
+ CLOSING ncdf FILE
+  
+   The tracers currently handled in the model are:
+      ============================================
+  
+       #1......KEY.......  .............VALUE............  ....TYPE....
+       NAME                                          'QV'  STRING                
+       PARENT                          'organize_physics'  STRING                
+       UNITS                                    'kg kg-1'  STRING                
+       NC_STDNAME                     'specific_humidity'  STRING                
+       NC_LONGNAME                    'specific humidity'  STRING                
+       GRB_PARAM                                       51  INTEGER               
+       GRB_TABLE                                        1  INTEGER               
+       ADV                                              1  INTEGER               
+       DIFF                                             0  INTEGER               
+       TURB                                             1  INTEGER               
+       CONV                                             0  INTEGER               
+       INI                                              1  INTEGER               
+       LBC                                              1  INTEGER               
+       BBC                                              2  INTEGER               
+       RELAX                                            1  INTEGER               
+       DAMP                                             1  INTEGER               
+       CLP                                              1  INTEGER               
+       ADD_CLP_ADV                                  FALSE  LOGICAL               
+       BD_0GRAD_FORCED                              FALSE  LOGICAL               
+       BD_SET_FORCED                                    0  INTEGER               
+       MASSFLX_CLP                                   TRUE  LOGICAL               
+       DAMP_FORCED                                  FALSE  LOGICAL               
+       SURF_FIELD                                          POINTER               
+                                                                                     
+       #2......KEY.......  .............VALUE............  ....TYPE....
+       NAME                                          'QC'  STRING                
+       PARENT                          'organize_physics'  STRING                
+       UNITS                                    'kg kg-1'  STRING                
+       NC_STDNAME          'mass_fraction_of_cloud_liquid  STRING                
+       NC_LONGNAME         'specific cloud liquid water c  STRING                
+       GRB_PARAM                                       31  INTEGER               
+       GRB_TABLE                                        2  INTEGER               
+       ADV                                              1  INTEGER               
+       DIFF                                             0  INTEGER               
+       TURB                                             1  INTEGER               
+       CONV                                             0  INTEGER               
+       INI                                              1  INTEGER               
+       LBC                                              1  INTEGER               
+       BBC                                              0  INTEGER               
+       RELAX                                            1  INTEGER               
+       DAMP                                             1  INTEGER               
+       CLP                                              1  INTEGER               
+       ADD_CLP_ADV                                  FALSE  LOGICAL               
+       BD_0GRAD_FORCED                              FALSE  LOGICAL               
+       BD_SET_FORCED                                    0  INTEGER               
+       MASSFLX_CLP                                   TRUE  LOGICAL               
+       DAMP_FORCED                                  FALSE  LOGICAL               
+       SURF_FIELD                                          POINTER               
+                                                                                     
+       #3......KEY.......  .............VALUE............  ....TYPE....
+       NAME                                          'QI'  STRING                
+       PARENT                          'organize_physics'  STRING                
+       UNITS                                    'kg kg-1'  STRING                
+       NC_STDNAME          'mass_fraction_of_cloud_ice_in  STRING                
+       NC_LONGNAME           'specific cloud ice content'  STRING                
+       GRB_PARAM                                       33  INTEGER               
+       GRB_TABLE                                        2  INTEGER               
+       ADV                                              1  INTEGER               
+       DIFF                                             0  INTEGER               
+       TURB                                             1  INTEGER               
+       CONV                                             0  INTEGER               
+       INI                                              0  INTEGER               
+       LBC                                              0  INTEGER               
+       BBC                                              0  INTEGER               
+       RELAX                                            1  INTEGER               
+       DAMP                                             1  INTEGER               
+       CLP                                              1  INTEGER               
+       ADD_CLP_ADV                                  FALSE  LOGICAL               
+       BD_0GRAD_FORCED                               TRUE  LOGICAL               
+       BD_SET_FORCED                                    0  INTEGER               
+       MASSFLX_CLP                                  FALSE  LOGICAL               
+       DAMP_FORCED                                  FALSE  LOGICAL               
+       SURF_FIELD                                          POINTER               
+                                                                                     
+       #4......KEY.......  .............VALUE............  ....TYPE....
+       NAME                                          'QR'  STRING                
+       PARENT                          'organize_physics'  STRING                
+       UNITS                                    'kg kg-1'  STRING                
+       NC_STDNAME          'mass_fraction_of_rain_in_air'  STRING                
+       NC_LONGNAME                'specific rain content'  STRING                
+       GRB_PARAM                                       35  INTEGER               
+       GRB_TABLE                                        2  INTEGER               
+       ADV                                              1  INTEGER               
+       DIFF                                             0  INTEGER               
+       TURB                                             0  INTEGER               
+       CONV                                             0  INTEGER               
+       INI                                              0  INTEGER               
+       LBC                                              3  INTEGER               
+       BBC                                              0  INTEGER               
+       RELAX                                            0  INTEGER               
+       DAMP                                             0  INTEGER               
+       CLP                                              1  INTEGER               
+       ADD_CLP_ADV                                   TRUE  LOGICAL               
+       BD_0GRAD_FORCED                               TRUE  LOGICAL               
+       BD_SET_FORCED                                    1  INTEGER               
+       MASSFLX_CLP                                  FALSE  LOGICAL               
+       DAMP_FORCED                                  FALSE  LOGICAL               
+       SURF_FIELD                                          POINTER               
+                                                                                     
+       #5......KEY.......  .............VALUE............  ....TYPE....
+       NAME                                          'QS'  STRING                
+       PARENT                          'organize_physics'  STRING                
+       UNITS                                    'kg kg-1'  STRING                
+       NC_STDNAME          'mass_fraction_of_snow_in_air'  STRING                
+       NC_LONGNAME                'specific snow content'  STRING                
+       GRB_PARAM                                       36  INTEGER               
+       GRB_TABLE                                        2  INTEGER               
+       ADV                                              1  INTEGER               
+       DIFF                                             0  INTEGER               
+       TURB                                             0  INTEGER               
+       CONV                                             0  INTEGER               
+       INI                                              0  INTEGER               
+       LBC                                              3  INTEGER               
+       BBC                                              0  INTEGER               
+       RELAX                                            0  INTEGER               
+       DAMP                                             0  INTEGER               
+       CLP                                              1  INTEGER               
+       ADD_CLP_ADV                                   TRUE  LOGICAL               
+       BD_0GRAD_FORCED                               TRUE  LOGICAL               
+       BD_SET_FORCED                                    1  INTEGER               
+       MASSFLX_CLP                                  FALSE  LOGICAL               
+       DAMP_FORCED                                  FALSE  LOGICAL               
+       SURF_FIELD                                          POINTER               
+                                                                                     
+  
+   INITIALIZATIONS
+     INITIALIZATIONS for DYNAMICS and RELAXATION
+  Minimum horizontal grid spacing (dx, dy):    8817.42100181064     
+   9118.31172278076     
+  Minimum vertical   grid spacing (dz)    :    20.0000000000000     
+  Value of big time step used    :    60.0000000000000     
+ Subr.[init_grid_metrics] ...
+  
+  Damping coefficients in Rayleigh damping layer
+  level   height    damping coefficient
+     1    21750.00      0.163970
+     2    19950.00      0.144962
+     3    18325.00      0.115482
+     4    16850.00      0.083333
+     5    15525.00      0.054307
+     6    14350.00      0.031501
+     7    13292.50      0.015296
+     8    12330.00      0.005258
+     9    11447.50      0.000601
+  
+     Lowest Level with Rayleigh-damping:            9
+  
+     PHYSICAL PACKAGES
+ *****************************************************
+ *   Radiative transfer calculations employ data     *
+ *        provided in routine rad_aibi               *
+ *****************************************************
+     INITIALIZE CONTROL VARIABLES AND MEAN VALUES
+   TIME STEPPING
+ CS=   348.928160417572       DT=   60.0000000000000       DTSMAX=
+   16.3492290186082     
+ SHORT TIME STEP of 1. RK step    10.0000000000000      , number of steps: 
+           2
+ SHORT TIME STEP of 2. RK step    10.0000000000000      , number of steps: 
+           3
+ SHORT TIME STEP of 3. RK step    10.0000000000000      , number of steps: 
+           6
+ ismtstep_sum =           11  ismtstep_max =            6
+  LEVELINDEX WHERE LEVELS BECOME FLAT, KFLAT =            9
+  BETA_SW  =   0.400000000000000       BETA_GW  =   0.400000000000000     
+  BETA2_SW =   0.400000000000000       BETA2_GW =   0.400000000000000     
+  XKD =   0.100000000000000     
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out01/lffd2008071400.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out02/lffd2008071400.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out03/lffd2008071400p.nc
+ CLOSING ncdf FILE
+------------------------------- start CCLM -------------------------------
+   SETUP OF THE LM
+     INITIALIZATIONS 
+        Info about KIND-parameters:   iintegers / MPI_INT =            4
+  1275069467
+                                      int_ga    / MPI_INT =            4
+  1275069467
+     INPUT OF THE NAMELISTS
+  *** NOTE: Old 10 digit date format is used
+ 
+ ==== Code information used to build this binary ====
+ Binary name ....: lmparbin
+ 
+ Library name ......: lm_f90
+ Tag name ..........: V5_0
+ Checkin-Date ......: 2013-11-08 08:58:35
+ Checkout-Date .....: 2013-11-08 10:45:42
+ Code is modified ..: .true.
+ Compile-Date ......: 
+ Compiled by .......: uschaett
+ Compiled on .......: 
+ 
+ Macros defined .: 
+ Macros undefined: 
+ Debug options ..: 
+ 
+ Current start time : 2020-09-25 08:09
+ Running on machine : 
+ Running on nodes ..: 
+ Data decomposition : 
+ ==== End of code information ====
+ 
+     INPUT OF THE NAMELISTS FOR DYNAMICS
+   DOMAIN SIZE (approx.) in m: L_x =    4634339.77780689     
+                               L_y =    3237000.66158717     
+     INPUT OF THE NAMELISTS FOR PHYSICS
+   *** WARNING: Own specifications of soil main levels are used *** 
+   ***          These have to correspond to the levels  of the  *** 
+   ***          coarse grid model!                              *** 
+     INPUT OF THE NAMELISTS FOR DIAGNOSTICS
+  WARNING  *** nincgp is set to 1 hour *** 
+     INPUT OF THE NAMELISTS FOR GRIB-IO
+ 
+   *** WARNING: Horizontal diffusion specified but lhordiff=F or hd_corr_trcr_xx
+ =0***
+   (Your specification: itype_diff is not respected for QV)
+ 
+ 
+   *** WARNING: Horizontal diffusion specified but lhordiff=F or hd_corr_trcr_xx
+ =0***
+   (Your specification: itype_diff is not respected for QC)
+ 
+     ALLOCATE SPACE
+   hd_mask - SETUP: i_west  =           58
+   hd_mask - SETUP: i_east  =          474
+   hd_mask - SETUP: j_south =           58
+   hd_mask - SETUP: j_north =          304
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/laf2008071400.nc
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   PID 409132 RUNNING AT intel-wang-1
+=   EXIT CODE: 6
+=   CLEANING UP REMAINING PROCESSES
+=   YOU CAN IGNORE THE BELOW CLEANUP MESSAGES
+===================================================================================
+   Intel(R) MPI Library troubleshooting guide:
+      https://software.intel.com/node/561764
+===================================================================================
+ CLOSING ncdf FILE
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ reference_atmosphere: calculate t0, p0, ... by averaging
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008071400.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008071403.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out01/lffd2008071400c.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out02/lffd2008071400c.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out03/lffd2008071400c.nc
+ CLOSING ncdf FILE
+  
+   The tracers currently handled in the model are:
+      ============================================
+  
+       #1......KEY.......  .............VALUE............  ....TYPE....
+       NAME                                          'QV'  STRING                
+       PARENT                          'organize_physics'  STRING                
+       UNITS                                    'kg kg-1'  STRING                
+       NC_STDNAME                     'specific_humidity'  STRING                
+       NC_LONGNAME                    'specific humidity'  STRING                
+       GRB_PARAM                                       51  INTEGER               
+       GRB_TABLE                                        1  INTEGER               
+       ADV                                              1  INTEGER               
+       DIFF                                             0  INTEGER               
+       TURB                                             1  INTEGER               
+       CONV                                             0  INTEGER               
+       INI                                              1  INTEGER               
+       LBC                                              1  INTEGER               
+       BBC                                              2  INTEGER               
+       RELAX                                            1  INTEGER               
+       DAMP                                             1  INTEGER               
+       CLP                                              1  INTEGER               
+       ADD_CLP_ADV                                  FALSE  LOGICAL               
+       BD_0GRAD_FORCED                              FALSE  LOGICAL               
+       BD_SET_FORCED                                    0  INTEGER               
+       MASSFLX_CLP                                   TRUE  LOGICAL               
+       DAMP_FORCED                                  FALSE  LOGICAL               
+       SURF_FIELD                                          POINTER               
+                                                                                     
+       #2......KEY.......  .............VALUE............  ....TYPE....
+       NAME                                          'QC'  STRING                
+       PARENT                          'organize_physics'  STRING                
+       UNITS                                    'kg kg-1'  STRING                
+       NC_STDNAME          'mass_fraction_of_cloud_liquid  STRING                
+       NC_LONGNAME         'specific cloud liquid water c  STRING                
+       GRB_PARAM                                       31  INTEGER               
+       GRB_TABLE                                        2  INTEGER               
+       ADV                                              1  INTEGER               
+       DIFF                                             0  INTEGER               
+       TURB                                             1  INTEGER               
+       CONV                                             0  INTEGER               
+       INI                                              1  INTEGER               
+       LBC                                              1  INTEGER               
+       BBC                                              0  INTEGER               
+       RELAX                                            1  INTEGER               
+       DAMP                                             1  INTEGER               
+       CLP                                              1  INTEGER               
+       ADD_CLP_ADV                                  FALSE  LOGICAL               
+       BD_0GRAD_FORCED                              FALSE  LOGICAL               
+       BD_SET_FORCED                                    0  INTEGER               
+       MASSFLX_CLP                                   TRUE  LOGICAL               
+       DAMP_FORCED                                  FALSE  LOGICAL               
+       SURF_FIELD                                          POINTER               
+                                                                                     
+       #3......KEY.......  .............VALUE............  ....TYPE....
+       NAME                                          'QI'  STRING                
+       PARENT                          'organize_physics'  STRING                
+       UNITS                                    'kg kg-1'  STRING                
+       NC_STDNAME          'mass_fraction_of_cloud_ice_in  STRING                
+       NC_LONGNAME           'specific cloud ice content'  STRING                
+       GRB_PARAM                                       33  INTEGER               
+       GRB_TABLE                                        2  INTEGER               
+       ADV                                              1  INTEGER               
+       DIFF                                             0  INTEGER               
+       TURB                                             1  INTEGER               
+       CONV                                             0  INTEGER               
+       INI                                              0  INTEGER               
+       LBC                                              0  INTEGER               
+       BBC                                              0  INTEGER               
+       RELAX                                            1  INTEGER               
+       DAMP                                             1  INTEGER               
+       CLP                                              1  INTEGER               
+       ADD_CLP_ADV                                  FALSE  LOGICAL               
+       BD_0GRAD_FORCED                               TRUE  LOGICAL               
+       BD_SET_FORCED                                    0  INTEGER               
+       MASSFLX_CLP                                  FALSE  LOGICAL               
+       DAMP_FORCED                                  FALSE  LOGICAL               
+       SURF_FIELD                                          POINTER               
+                                                                                     
+       #4......KEY.......  .............VALUE............  ....TYPE....
+       NAME                                          'QR'  STRING                
+       PARENT                          'organize_physics'  STRING                
+       UNITS                                    'kg kg-1'  STRING                
+       NC_STDNAME          'mass_fraction_of_rain_in_air'  STRING                
+       NC_LONGNAME                'specific rain content'  STRING                
+       GRB_PARAM                                       35  INTEGER               
+       GRB_TABLE                                        2  INTEGER               
+       ADV                                              1  INTEGER               
+       DIFF                                             0  INTEGER               
+       TURB                                             0  INTEGER               
+       CONV                                             0  INTEGER               
+       INI                                              0  INTEGER               
+       LBC                                              3  INTEGER               
+       BBC                                              0  INTEGER               
+       RELAX                                            0  INTEGER               
+       DAMP                                             0  INTEGER               
+       CLP                                              1  INTEGER               
+       ADD_CLP_ADV                                   TRUE  LOGICAL               
+       BD_0GRAD_FORCED                               TRUE  LOGICAL               
+       BD_SET_FORCED                                    1  INTEGER               
+       MASSFLX_CLP                                  FALSE  LOGICAL               
+       DAMP_FORCED                                  FALSE  LOGICAL               
+       SURF_FIELD                                          POINTER               
+                                                                                     
+       #5......KEY.......  .............VALUE............  ....TYPE....
+       NAME                                          'QS'  STRING                
+       PARENT                          'organize_physics'  STRING                
+       UNITS                                    'kg kg-1'  STRING                
+       NC_STDNAME          'mass_fraction_of_snow_in_air'  STRING                
+       NC_LONGNAME                'specific snow content'  STRING                
+       GRB_PARAM                                       36  INTEGER               
+       GRB_TABLE                                        2  INTEGER               
+       ADV                                              1  INTEGER               
+       DIFF                                             0  INTEGER               
+       TURB                                             0  INTEGER               
+       CONV                                             0  INTEGER               
+       INI                                              0  INTEGER               
+       LBC                                              3  INTEGER               
+       BBC                                              0  INTEGER               
+       RELAX                                            0  INTEGER               
+       DAMP                                             0  INTEGER               
+       CLP                                              1  INTEGER               
+       ADD_CLP_ADV                                   TRUE  LOGICAL               
+       BD_0GRAD_FORCED                               TRUE  LOGICAL               
+       BD_SET_FORCED                                    1  INTEGER               
+       MASSFLX_CLP                                  FALSE  LOGICAL               
+       DAMP_FORCED                                  FALSE  LOGICAL               
+       SURF_FIELD                                          POINTER               
+                                                                                     
+  
+   INITIALIZATIONS
+     INITIALIZATIONS for DYNAMICS and RELAXATION
+  Minimum horizontal grid spacing (dx, dy):    8817.42100181064     
+   9118.31172278076     
+  Minimum vertical   grid spacing (dz)    :    20.0000000000000     
+  Value of big time step used    :    30.0000000000000     
+ Subr.[init_grid_metrics] ...
+  
+  Damping coefficients in Rayleigh damping layer
+  level   height    damping coefficient
+     1    21750.00      0.163970
+     2    19950.00      0.144962
+     3    18325.00      0.115482
+     4    16850.00      0.083333
+     5    15525.00      0.054307
+     6    14350.00      0.031501
+     7    13292.50      0.015296
+     8    12330.00      0.005258
+     9    11447.50      0.000601
+  
+     Lowest Level with Rayleigh-damping:            9
+  
+     PHYSICAL PACKAGES
+ *****************************************************
+ *   Radiative transfer calculations employ data     *
+ *        provided in routine rad_aibi               *
+ *****************************************************
+     INITIALIZE CONTROL VARIABLES AND MEAN VALUES
+   TIME STEPPING
+ CS=   348.928160417572       DT=   30.0000000000000       DTSMAX=
+   16.3492290186082     
+ SHORT TIME STEP of 1. RK step    5.00000000000000      , number of steps: 
+           2
+ SHORT TIME STEP of 2. RK step    5.00000000000000      , number of steps: 
+           3
+ SHORT TIME STEP of 3. RK step    5.00000000000000      , number of steps: 
+           6
+ ismtstep_sum =           11  ismtstep_max =            6
+  LEVELINDEX WHERE LEVELS BECOME FLAT, KFLAT =            9
+  BETA_SW  =   0.400000000000000       BETA_GW  =   0.400000000000000     
+  BETA2_SW =   0.400000000000000       BETA2_GW =   0.400000000000000     
+  XKD =   0.100000000000000     
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out01/lffd2008071400.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out02/lffd2008071400.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out03/lffd2008071400p.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008071406.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out01/lffd2008071403.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008071409.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out01/lffd2008071406.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out02/lffd2008071406.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out03/lffd2008071406p.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008071412.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out01/lffd2008071409.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008071415.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out01/lffd2008071412.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out02/lffd2008071412.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out03/lffd2008071412p.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008071418.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out01/lffd2008071415.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008071421.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out01/lffd2008071418.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out02/lffd2008071418.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out03/lffd2008071418p.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008071500.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out01/lffd2008071421.nc
+ CLOSING ncdf FILE
+ ...... FORECAST TIME IS NOW 000001 DAYS ......
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out01/lffd2008071500.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out02/lffd2008071500.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out03/lffd2008071500p.nc
+ CLOSING ncdf FILE
+ END OF TIME STEPPING
+ CLEAN UP
+------------------------------- CCLM finished -------------------------------

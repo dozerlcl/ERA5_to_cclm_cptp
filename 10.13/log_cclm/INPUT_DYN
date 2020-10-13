@@ -1,0 +1,19 @@
+ &DYNCTL
+  l2tls = .TRUE.,                  ! 2 time-level RK scheme
+  ldiabf_lh = .TRUE.,
+  ldyn_bbc = .TRUE.,
+  lexpl_lbc = .TRUE.,
+  ldyn_bbc = .FALSE.,
+  rlwidth = 100000.,               ! 10-15 times the grid mesh size in meter
+  lspecnudge=.FALSE.,alpha_sn=0.05,
+  l_diff_Smag = .TRUE.,
+  iadv_order = 3,
+  itype_fast_waves = 2,
+  itype_bbc_w = 114,
+  isc_sn=6, jsc_sn=6,
+  !  yvarsn='U     ','V    ',
+  y_scalar_advect='BOTT2',
+  nrdtau = 6,
+  lhordiff = .TRUE.,
+
+ /END

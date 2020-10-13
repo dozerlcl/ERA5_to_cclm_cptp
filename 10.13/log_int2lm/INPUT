@@ -1,0 +1,78 @@
+ &CONTRL
+  ydate_ini='2008071400', hstart=0.0, hstop=264.0, hincbound=3,
+  yinput_model='CM',
+  itype_profiles_vert_interp = 1,   
+  itype_aerosol = 2,
+  itype_albedo=2,
+  itype_calendar = 0,
+  itype_rootdp = 4,
+  itype_t_cl = 1, 
+  itype_w_so_rel = 1,
+  l_cressman = .FALSE., 
+  lbdclim = .TRUE.,  
+  lboundaries =.TRUE., 
+  lfilter_oro=.FALSE.,
+  lforest = .TRUE.,
+  linitial=.TRUE.,
+  lmulti_layer_in = .TRUE., 
+  lmulti_layer_lm = .TRUE.,
+  lprog_qi = .TRUE.,
+  lreorder = .TRUE.,
+  lsso = .TRUE.,
+  ltime_mean = .TRUE., 
+  luse_t_skin = .TRUE.,
+  nincwait = 5, nmaxwait = 20, 
+  nprocx = 12, nprocy = 8,
+/END
+ &GRID_IN
+  pcontrol_fi =30000., 
+  ie_in_tot = 527, 
+  je_in_tot = 261, 
+  ke_in_tot = 108,
+  startlat_in_tot =  -6.323183, 
+  endlat_in_tot   =  66.74469, 
+  startlon_in_tot =  43.03125,
+  endlon_in_tot   = -169.0315,            ! 正确结束的经度 -169.0312
+  pollat_in = 90.0, pollon_in = 180.0,                             ! 无旋转
+  lushift_in=.FALSE.,.FALSE., lvshift_in=.FALSE.,.FALSE.,
+  ke_soil_in = 3,                                                  ! n 个层次有n+1个czml soil in
+  czml_soil_in = 0.035, 0.175, 0.64, 1.775,
+ /END
+ &LMGRID
+  ivctype = 2,
+  irefatm = 1,
+  ielm_tot=531, jelm_tot=361, kelm_tot=40,
+  pollat =  57, pollon = -91.5, 
+  dlon=0.08200, dlat=0.08200, 
+  startlon_tot  = -21.73000, startlat_tot  = -14.76000,
+  !  ielm_tot=527, jelm_tot=357, kelm_tot=40,
+  !  pollat =  57, pollon = -91.5, 
+  !  dlon=0.08200, dlat=0.08200, 
+  !  startlon_tot  = -21.566, startlat_tot  = -14.596,
+  ke_soil_lm=3,   
+  czml_soil_lm = 0.035, 0.175, 0.64, 1.775,
+ /END
+ &DATABASE
+ /
+ &DATA
+  yinput_type='analysis',
+  ytunit_in='d',
+  ytunit_out='d',
+  ylmext_form_read='ncdf',
+  yinext_form_read='ncdf',
+  yin_form_read='ncdf',
+  ylm_form_write='ncdf',
+  ie_ext=531, je_ext=361,
+  ylmext_lfn='cptp_08lager_domain2020092314159.nc',
+  ylmext_cat='/m2data2/yycheng/data_stage/cptp/cptp_ext_test/',
+  yinext_lfn='cas2008070100.nc',
+  yinext_cat='/m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/', ! 用第一个时间的文件做yinext? for GME?
+  yin_cat='/m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/',
+  ylm_cat='/m2data2/yycheng/data_stage/cptp/cptp_out/int2lm',
+  nprocess_ini = 131, nprocess_bd = 132, 
+ /END
+ &PRICTR
+  igp_tot = 36,
+  jgp_tot = 30,
+  lchkin=.TRUE., lchkout=.TRUE.,
+ /END

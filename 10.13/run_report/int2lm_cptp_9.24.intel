@@ -1,0 +1,2447 @@
+----- start INT2CLM
+----- start INT2CLM
+   SETUP OF INT2LM
+     INITIALIZATIONS 
+        Info about KIND-parameters:   i4        / MPI_INT =            4
+  1275069467
+                                      int_ga    / MPI_INT =            4
+  1275069467
+     INPUT OF THE NAMELISTS
+  *** NOTE: Old 10 digit date format is used for output files of INT2LM
+  ERROR    *** Wrong size of the processor-grid for nproc *** 
+           ***            4  *            6  +            0  /=           96
+   *** specifications of input soil main levels *** 
+   *** from Namelist INPUT are used       *** 
+   *** specifications of LM soil main levels *** 
+   *** from Namelist INPUT are used          *** 
+  *** A default set for vcoord parameters is used:            1
+  *** A  default set for refatm parameters is used:            1
+ 
+ ==== Code information used to build this binary ====
+ Binary name .......: tstint2lm
+ 
+ Library name ......: int2lm
+ Tag name ..........: V2_5
+ Checkin-Date ......: 2018-02-26 12:36:17
+ Code is modified ..: .false.
+ Compile-Date ......: 
+ Compiled by .......: uschaett
+ GRIB_API version ..: 
+ 
+ Current start time : 2020-09-24 23:58
+ Running on nodes ..: 
+ Data decomposition : 
+ ==== End of code information ====
+ 
+ *------------------------------------------------------------*
+ *    PROGRAM TERMINATED BECAUSE OF ERRORS DETECTED
+ *              IN ROUTINE:   int2lm_org
+ *
+ *    ERROR CODE is         1002
+ *     ERROR    *** Wrong values occured in NAMELIST input ***
+ *------------------------------------------------------------*
+----- start INT2CLM
+   SETUP OF INT2LM
+     INITIALIZATIONS 
+        Info about KIND-parameters:   i4        / MPI_INT =            4
+  1275069467
+                                      int_ga    / MPI_INT =            4
+  1275069467
+     INPUT OF THE NAMELISTS
+  *** NOTE: Old 10 digit date format is used for output files of INT2LM
+  ERROR    *** Wrong size of the processor-grid for nproc *** 
+           ***           12  *            9  +            0  /=           96
+   *** specifications of input soil main levels *** 
+   *** from Namelist INPUT are used       *** 
+   *** specifications of LM soil main levels *** 
+   *** from Namelist INPUT are used          *** 
+  *** A default set for vcoord parameters is used:            1
+  *** A  default set for refatm parameters is used:            1
+ 
+ ==== Code information used to build this binary ====
+ Binary name .......: tstint2lm
+ 
+ Library name ......: int2lm
+ Tag name ..........: V2_5
+ Checkin-Date ......: 2018-02-26 12:36:17
+ Code is modified ..: .false.
+ Compile-Date ......: 
+ Compiled by .......: uschaett
+ GRIB_API version ..: 
+ 
+ Current start time : 2020-09-24 23:58
+ Running on nodes ..: 
+ Data decomposition : 
+ ==== End of code information ====
+ 
+ *------------------------------------------------------------*
+ *    PROGRAM TERMINATED BECAUSE OF ERRORS DETECTED
+ *              IN ROUTINE:   int2lm_org
+ *
+ *    ERROR CODE is         1002
+ *     ERROR    *** Wrong values occured in NAMELIST input ***
+ *------------------------------------------------------------*
+----- start INT2CLM
+   SETUP OF INT2LM
+     INITIALIZATIONS 
+        Info about KIND-parameters:   i4        / MPI_INT =            4
+  1275069467
+                                      int_ga    / MPI_INT =            4
+  1275069467
+     INPUT OF THE NAMELISTS
+  *** NOTE: Old 10 digit date format is used for output files of INT2LM
+   *** specifications of input soil main levels *** 
+   *** from Namelist INPUT are used       *** 
+   *** specifications of LM soil main levels *** 
+   *** from Namelist INPUT are used          *** 
+  *** A default set for vcoord parameters is used:            1
+  *** A  default set for refatm parameters is used:            1
+     GRID ORGANIZATION
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008070100.nc
+ CLOSING ncdf FILE
+     MEMORY ALLOCATION
+     FURTHER INITIALIZATIONS
+ 
+ ==== Code information used to build this binary ====
+ Binary name .......: tstint2lm
+ 
+ Library name ......: int2lm
+ Tag name ..........: V2_5
+ Checkin-Date ......: 2018-02-26 12:36:17
+ Code is modified ..: .false.
+ Compile-Date ......: 
+ Compiled by .......: uschaett
+ GRIB_API version ..: 
+ 
+ Current start time : 2020-09-24 23:59
+ Running on nodes ..: 
+ Data decomposition : 
+ ==== End of code information ====
+ 
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_ext_test/cptp_08lager_domain2020092314159
+ .nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008070100.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008071400.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/laf2008071400.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008071400.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008071400.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008071403.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008071403.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008071406.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008071406.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008071409.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008071409.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008071412.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008071412.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008071415.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008071415.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008071418.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008071418.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008071421.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008071421.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008071500.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008071500.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008071503.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008071503.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008071506.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008071506.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008071509.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008071509.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008071512.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008071512.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008071515.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008071515.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008071518.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008071518.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008071521.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008071521.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008071600.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008071600.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008071603.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008071603.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008071606.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008071606.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008071609.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008071609.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008071612.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008071612.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008071615.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008071615.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008071618.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008071618.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008071621.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008071621.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008071700.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008071700.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008071703.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008071703.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008071706.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008071706.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008071709.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008071709.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008071712.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008071712.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008071715.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008071715.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008071718.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008071718.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008071721.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008071721.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008071800.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008071800.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008071803.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008071803.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008071806.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008071806.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008071809.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008071809.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008071812.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008071812.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008071815.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008071815.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008071818.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008071818.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008071821.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008071821.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008071900.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008071900.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008071903.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008071903.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008071906.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008071906.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008071909.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008071909.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008071912.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008071912.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008071915.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008071915.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008071918.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008071918.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008071921.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008071921.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008072000.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008072000.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008072003.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008072003.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008072006.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008072006.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008072009.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008072009.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008072012.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008072012.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008072015.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008072015.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008072018.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008072018.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008072021.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008072021.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008072100.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008072100.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008072103.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008072103.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008072106.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008072106.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008072109.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008072109.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008072112.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008072112.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008072115.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008072115.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008072118.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008072118.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008072121.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008072121.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008072200.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008072200.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008072203.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008072203.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008072206.nc
+----- start INT2CLM
+   SETUP OF INT2LM
+     INITIALIZATIONS 
+        Info about KIND-parameters:   i4        / MPI_INT =            4
+  1275069467
+                                      int_ga    / MPI_INT =            4
+  1275069467
+     INPUT OF THE NAMELISTS
+  *** NOTE: Old 10 digit date format is used for output files of INT2LM
+   *** specifications of input soil main levels *** 
+   *** from Namelist INPUT are used       *** 
+   *** specifications of LM soil main levels *** 
+   *** from Namelist INPUT are used          *** 
+  *** A default set for vcoord parameters is used:            1
+  *** A  default set for refatm parameters is used:            1
+     GRID ORGANIZATION
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008070100.nc
+ CLOSING ncdf FILE
+     MEMORY ALLOCATION
+     FURTHER INITIALIZATIONS
+ 
+ ==== Code information used to build this binary ====
+ Binary name .......: tstint2lm
+ 
+ Library name ......: int2lm
+ Tag name ..........: V2_5
+ Checkin-Date ......: 2018-02-26 12:36:17
+ Code is modified ..: .false.
+ Compile-Date ......: 
+ Compiled by .......: uschaett
+ GRIB_API version ..: 
+ 
+ Current start time : 2020-09-25 01:23
+ Running on nodes ..: 
+ Data decomposition : 
+ ==== End of code information ====
+ 
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_ext_test/cptp_08lager_domain2020092314159
+ .nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008070100.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008071400.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/laf2008071400.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008071400.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008071400.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008071403.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008071403.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008071406.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008071406.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008071409.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008071409.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008071412.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008071412.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008071415.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008071415.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008071418.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008071418.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008071421.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008071421.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008071500.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008071500.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008071503.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008071503.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008071506.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008071506.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008071509.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008071509.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008071512.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008071512.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008071515.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008071515.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008071518.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008071518.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008071521.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008071521.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008071600.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008071600.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008071603.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008071603.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008071606.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008071606.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008071609.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008071609.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008071612.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008071612.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008071615.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008071615.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008071618.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008071618.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008071621.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008071621.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008071700.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008071700.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008071703.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008071703.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008071706.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008071706.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008071709.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008071709.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008071712.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008071712.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008071715.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008071715.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008071718.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008071718.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008071721.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008071721.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008071800.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008071800.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008071803.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008071803.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008071806.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008071806.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008071809.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008071809.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008071812.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008071812.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008071815.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008071815.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008071818.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008071818.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008071821.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008071821.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008071900.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008071900.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008071903.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008071903.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008071906.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008071906.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008071909.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008071909.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008071912.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008071912.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008071915.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008071915.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008071918.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008071918.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008071921.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008071921.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008072000.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008072000.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008072003.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008072003.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008072006.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008072006.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008072009.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008072009.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008072012.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008072012.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008072015.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008072015.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008072018.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008072018.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008072021.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008072021.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008072100.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008072100.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008072103.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008072103.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008072106.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008072106.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008072109.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008072109.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008072112.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008072112.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008072115.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008072115.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008072118.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008072118.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008072121.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008072121.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008072200.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008072200.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008072203.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008072203.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008072206.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008072206.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008072209.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008072209.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008072212.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008072212.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008072215.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008072215.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008072218.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008072218.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008072221.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008072221.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008072300.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008072300.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008072303.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008072303.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008072306.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008072306.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008072309.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008072309.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008072312.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008072312.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008072315.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008072315.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008072318.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008072318.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008072321.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008072321.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008072400.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008072400.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008072403.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008072403.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008072406.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008072406.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008072409.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008072409.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008072412.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008072412.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008072415.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008072415.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008072418.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008072418.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008072421.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008072421.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008072500.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008072500.nc
+ CLOSING ncdf FILE
+ CLEANUP
+----- INT2CLM finished, cheer up.
+----- start INT2CLM
+   SETUP OF INT2LM
+     INITIALIZATIONS 
+        Info about KIND-parameters:   i4        / MPI_INT =            4
+  1275069467
+                                      int_ga    / MPI_INT =            4
+  1275069467
+     INPUT OF THE NAMELISTS
+  *** NOTE: Old 10 digit date format is used for output files of INT2LM
+   *** specifications of input soil main levels *** 
+   *** from Namelist INPUT are used       *** 
+   *** specifications of LM soil main levels *** 
+   *** from Namelist INPUT are used          *** 
+  *** A default set for vcoord parameters is used:            1
+  *** A  default set for refatm parameters is used:            1
+     GRID ORGANIZATION
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008070100.nc
+ CLOSING ncdf FILE
+     MEMORY ALLOCATION
+     FURTHER INITIALIZATIONS
+ 
+ ==== Code information used to build this binary ====
+ Binary name .......: tstint2lm
+ 
+ Library name ......: int2lm
+ Tag name ..........: V2_5
+ Checkin-Date ......: 2018-02-26 12:36:17
+ Code is modified ..: .false.
+ Compile-Date ......: 
+ Compiled by .......: uschaett
+ GRIB_API version ..: 
+ 
+ Current start time : 2020-09-25 06:04
+ Running on nodes ..: 
+ Data decomposition : 
+ ==== End of code information ====
+ 
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_ext_test/cptp_08lager_domain2020092314159
+ .nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008070100.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008071400.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/laf2008071400.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008071400.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008071400.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008071403.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008071403.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008071406.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008071406.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008071409.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008071409.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008071412.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008071412.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008071415.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008071415.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008071418.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008071418.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008071421.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008071421.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008071500.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008071500.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008071503.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008071503.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008071506.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008071506.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008071509.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008071509.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008071512.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008071512.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008071515.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008071515.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008071518.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008071518.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008071521.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008071521.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008071600.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008071600.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008071603.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008071603.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008071606.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008071606.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008071609.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008071609.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008071612.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008071612.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008071615.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008071615.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008071618.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008071618.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008071621.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008071621.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008071700.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008071700.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008071703.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008071703.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008071706.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008071706.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008071709.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008071709.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008071712.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008071712.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008071715.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008071715.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008071718.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008071718.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008071721.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008071721.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008071800.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008071800.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008071803.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008071803.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008071806.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008071806.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008071809.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008071809.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008071812.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008071812.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008071815.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008071815.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008071818.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008071818.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008071821.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008071821.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008071900.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008071900.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008071903.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008071903.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008071906.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008071906.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008071909.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008071909.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008071912.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008071912.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008071915.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008071915.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008071918.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008071918.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008071921.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008071921.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008072000.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008072000.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008072003.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008072003.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008072006.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008072006.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008072009.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008072009.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008072012.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008072012.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008072015.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008072015.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008072018.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008072018.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008072021.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008072021.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008072100.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008072100.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008072103.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008072103.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008072106.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008072106.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008072109.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008072109.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008072112.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008072112.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008072115.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008072115.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008072118.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008072118.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008072121.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008072121.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008072200.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008072200.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008072203.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008072203.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008072206.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008072206.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008072209.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008072209.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008072212.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008072212.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008072215.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008072215.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008072218.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008072218.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008072221.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008072221.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008072300.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008072300.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008072303.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008072303.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008072306.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008072306.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008072309.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008072309.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008072312.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008072312.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008072315.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008072315.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008072318.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008072318.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008072321.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008072321.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008072400.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008072400.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008072403.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008072403.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008072406.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008072406.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008072409.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008072409.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008072412.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008072412.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008072415.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008072415.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008072418.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008072418.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008072421.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008072421.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/ERA5_EA_2008_07/cas2008072500.nc
+ CLOSING ncdf FILE
+  *** Control Geopotential has been calculated ***
+  *** FI is marked as being read               ***
+  *** T_SKIN is used for T_S ***
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008072500.nc
+ CLOSING ncdf FILE
+ CLEANUP
+----- INT2CLM finished, cheer up.

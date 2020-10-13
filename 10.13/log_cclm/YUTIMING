@@ -1,0 +1,50 @@
+  
+    Mean values of the timings for all tasks:
+    =========================================
+  
+Timings for    12 x     8:  
+  
+Time for the setup of the model:         1.95
+Time for the cleanup of the model:       0.02
+Time for the total model run:        37114.04
+  
+                             Min.         Avg.         Max.        Total
+  
+Dyn. Computations          26618.54     28617.09     30290.69   2747240.44
+  Horizontal Diffusion       746.25       838.20       949.07     80467.47
+  Horizontal Advection      1709.90      2673.51      3337.11    256657.12
+  Add. Tend+Moist           2979.21      3494.14      4508.75    335437.14
+  Slow Tendencies           1438.33      1570.51      1736.60    150768.89
+  Fast Waves               17520.69     19389.70     20616.59   1861410.75
+  Relaxation                 368.82       418.08       455.99     40135.39
+  Spectr. Nudging              0.00         0.00         0.00         0.00
+Fast Waves Comm.             856.41      1965.27      3321.08    188665.72
+Fast Waves Barrier             0.00         0.00         0.00         0.00
+Communications  Dyn          587.29      1807.65      3511.17    173534.78
+Barrier Waiting Dyn            0.00         0.00         0.00         0.00
+Global Comm     Dyn           84.80       207.74       459.95     19942.60
+Barrier GlobCom Dyn            0.00         0.00         0.00         0.00
+  
+Phy. Computations           2816.60      3478.48      4110.06    333933.80
+  Precipitation              588.32      1070.00      1465.56    102720.10
+  Radiation                  277.93       297.70       324.71     28578.90
+  Turbulence                1014.93      1121.34      1176.03    107648.82
+  Convection                 446.54       579.28       766.83     55610.75
+  Soil Model                  18.72       146.33       163.81     14047.90
+  Sub-grid Scale Oro.         51.75        98.72       115.94      9476.66
+Communications  Phy          115.93       289.40       463.73     27782.86
+Barrier Waiting Phy            0.00         0.00         0.00         0.00
+  
+Add. Computations            570.56       600.47       640.89     57645.49
+Input                         40.40        40.47        40.55      3885.59
+  read data                    0.63        14.10        25.18      1353.18
+  meta data                    0.45         0.59         0.70        56.23
+  computations I               2.79         4.50         8.32       431.97
+  distribute data             11.80        21.26        30.82      2041.00
+Output                       104.68       105.40       108.03     10118.31
+  computations O              30.94        37.39        39.03      3589.82
+  meta  data                   0.00         0.00         0.00         0.02
+  write data                   0.69        25.51        58.95      2448.65
+  gather data                 17.85        42.25        65.92      4055.72
+  
+  

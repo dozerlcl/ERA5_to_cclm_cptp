@@ -1,0 +1,1220 @@
+------------------------------- start CCLM ----------------------------------
+   SETUP OF THE LM
+     INITIALIZATIONS 
+        Info about KIND-parameters:   iintegers / MPI_INT =            4
+  1275069467
+                                      int_ga    / MPI_INT =            4
+  1275069467
+     INPUT OF THE NAMELISTS
+  *** NOTE: Old 10 digit date format is used
+ 
+ ==== Code information used to build this binary ====
+ Binary name ....: lmparbin
+ 
+ Library name ......: lm_f90
+ Tag name ..........: V5_0
+ Checkin-Date ......: 2013-11-08 08:58:35
+ Checkout-Date .....: 2013-11-08 10:45:42
+ Code is modified ..: .true.
+ Compile-Date ......: 
+ Compiled by .......: uschaett
+ Compiled on .......: 
+ 
+ Macros defined .: 
+ Macros undefined: 
+ Debug options ..: 
+ 
+ Current start time : 2020-09-26 07:06
+ Running on machine : 
+ Running on nodes ..: 
+ Data decomposition : 
+ ==== End of code information ====
+ 
+     INPUT OF THE NAMELISTS FOR DYNAMICS
+   DOMAIN SIZE (approx.) in m: L_x =    4634339.77780689     
+                               L_y =    3237000.66158717     
+     INPUT OF THE NAMELISTS FOR PHYSICS
+   *** WARNING: Own specifications of soil main levels are used *** 
+   ***          These have to correspond to the levels  of the  *** 
+   ***          coarse grid model!                              *** 
+     INPUT OF THE NAMELISTS FOR DIAGNOSTICS
+  WARNING  *** nincgp is set to 1 hour *** 
+     INPUT OF THE NAMELISTS FOR GRIB-IO
+ 
+   *** WARNING: Horizontal diffusion specified but lhordiff=F or hd_corr_trcr_xx
+ =0***
+   (Your specification: itype_diff is not respected for QV)
+ 
+ 
+   *** WARNING: Horizontal diffusion specified but lhordiff=F or hd_corr_trcr_xx
+ =0***
+   (Your specification: itype_diff is not respected for QC)
+ 
+     ALLOCATE SPACE
+   hd_mask - SETUP: i_west  =           14
+   hd_mask - SETUP: i_east  =          518
+   hd_mask - SETUP: j_south =           14
+   hd_mask - SETUP: j_north =          348
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/laf2008071400.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008071400.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008071403.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out01/lffd2008071400c.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out02/lffd2008071400c.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out03/lffd2008071400c.nc
+ CLOSING ncdf FILE
+  
+   The tracers currently handled in the model are:
+      ============================================
+  
+       #1......KEY.......  .............VALUE............  ....TYPE....
+       NAME                                          'QV'  STRING                
+       PARENT                          'organize_physics'  STRING                
+       UNITS                                    'kg kg-1'  STRING                
+       NC_STDNAME                     'specific_humidity'  STRING                
+       NC_LONGNAME                    'specific humidity'  STRING                
+       GRB_PARAM                                       51  INTEGER               
+       GRB_TABLE                                        1  INTEGER               
+       ADV                                              1  INTEGER               
+       DIFF                                             0  INTEGER               
+       TURB                                             1  INTEGER               
+       CONV                                             0  INTEGER               
+       INI                                              1  INTEGER               
+       LBC                                              1  INTEGER               
+       BBC                                              2  INTEGER               
+       RELAX                                            1  INTEGER               
+       DAMP                                             1  INTEGER               
+       CLP                                              1  INTEGER               
+       ADD_CLP_ADV                                  FALSE  LOGICAL               
+       BD_0GRAD_FORCED                              FALSE  LOGICAL               
+       BD_SET_FORCED                                    0  INTEGER               
+       MASSFLX_CLP                                   TRUE  LOGICAL               
+       DAMP_FORCED                                  FALSE  LOGICAL               
+       SURF_FIELD                                          POINTER               
+                                                                                     
+       #2......KEY.......  .............VALUE............  ....TYPE....
+       NAME                                          'QC'  STRING                
+       PARENT                          'organize_physics'  STRING                
+       UNITS                                    'kg kg-1'  STRING                
+       NC_STDNAME          'mass_fraction_of_cloud_liquid  STRING                
+       NC_LONGNAME         'specific cloud liquid water c  STRING                
+       GRB_PARAM                                       31  INTEGER               
+       GRB_TABLE                                        2  INTEGER               
+       ADV                                              1  INTEGER               
+       DIFF                                             0  INTEGER               
+       TURB                                             1  INTEGER               
+       CONV                                             0  INTEGER               
+       INI                                              1  INTEGER               
+       LBC                                              1  INTEGER               
+       BBC                                              0  INTEGER               
+       RELAX                                            1  INTEGER               
+       DAMP                                             1  INTEGER               
+       CLP                                              1  INTEGER               
+       ADD_CLP_ADV                                  FALSE  LOGICAL               
+       BD_0GRAD_FORCED                              FALSE  LOGICAL               
+       BD_SET_FORCED                                    0  INTEGER               
+       MASSFLX_CLP                                   TRUE  LOGICAL               
+       DAMP_FORCED                                  FALSE  LOGICAL               
+       SURF_FIELD                                          POINTER               
+                                                                                     
+       #3......KEY.......  .............VALUE............  ....TYPE....
+       NAME                                          'QI'  STRING                
+       PARENT                          'organize_physics'  STRING                
+       UNITS                                    'kg kg-1'  STRING                
+       NC_STDNAME          'mass_fraction_of_cloud_ice_in  STRING                
+       NC_LONGNAME           'specific cloud ice content'  STRING                
+       GRB_PARAM                                       33  INTEGER               
+       GRB_TABLE                                        2  INTEGER               
+       ADV                                              1  INTEGER               
+       DIFF                                             0  INTEGER               
+       TURB                                             1  INTEGER               
+       CONV                                             0  INTEGER               
+       INI                                              0  INTEGER               
+       LBC                                              0  INTEGER               
+       BBC                                              0  INTEGER               
+       RELAX                                            1  INTEGER               
+       DAMP                                             1  INTEGER               
+       CLP                                              1  INTEGER               
+       ADD_CLP_ADV                                  FALSE  LOGICAL               
+       BD_0GRAD_FORCED                               TRUE  LOGICAL               
+       BD_SET_FORCED                                    0  INTEGER               
+       MASSFLX_CLP                                  FALSE  LOGICAL               
+       DAMP_FORCED                                  FALSE  LOGICAL               
+       SURF_FIELD                                          POINTER               
+                                                                                     
+       #4......KEY.......  .............VALUE............  ....TYPE....
+       NAME                                          'QR'  STRING                
+       PARENT                          'organize_physics'  STRING                
+       UNITS                                    'kg kg-1'  STRING                
+       NC_STDNAME          'mass_fraction_of_rain_in_air'  STRING                
+       NC_LONGNAME                'specific rain content'  STRING                
+       GRB_PARAM                                       35  INTEGER               
+       GRB_TABLE                                        2  INTEGER               
+       ADV                                              1  INTEGER               
+       DIFF                                             0  INTEGER               
+       TURB                                             0  INTEGER               
+       CONV                                             0  INTEGER               
+       INI                                              0  INTEGER               
+       LBC                                              3  INTEGER               
+       BBC                                              0  INTEGER               
+       RELAX                                            0  INTEGER               
+       DAMP                                             0  INTEGER               
+       CLP                                              1  INTEGER               
+       ADD_CLP_ADV                                   TRUE  LOGICAL               
+       BD_0GRAD_FORCED                               TRUE  LOGICAL               
+       BD_SET_FORCED                                    1  INTEGER               
+       MASSFLX_CLP                                  FALSE  LOGICAL               
+       DAMP_FORCED                                  FALSE  LOGICAL               
+       SURF_FIELD                                          POINTER               
+                                                                                     
+       #5......KEY.......  .............VALUE............  ....TYPE....
+       NAME                                          'QS'  STRING                
+       PARENT                          'organize_physics'  STRING                
+       UNITS                                    'kg kg-1'  STRING                
+       NC_STDNAME          'mass_fraction_of_snow_in_air'  STRING                
+       NC_LONGNAME                'specific snow content'  STRING                
+       GRB_PARAM                                       36  INTEGER               
+       GRB_TABLE                                        2  INTEGER               
+       ADV                                              1  INTEGER               
+       DIFF                                             0  INTEGER               
+       TURB                                             0  INTEGER               
+       CONV                                             0  INTEGER               
+       INI                                              0  INTEGER               
+       LBC                                              3  INTEGER               
+       BBC                                              0  INTEGER               
+       RELAX                                            0  INTEGER               
+       DAMP                                             0  INTEGER               
+       CLP                                              1  INTEGER               
+       ADD_CLP_ADV                                   TRUE  LOGICAL               
+       BD_0GRAD_FORCED                               TRUE  LOGICAL               
+       BD_SET_FORCED                                    1  INTEGER               
+       MASSFLX_CLP                                  FALSE  LOGICAL               
+       DAMP_FORCED                                  FALSE  LOGICAL               
+       SURF_FIELD                                          POINTER               
+                                                                                     
+  
+   INITIALIZATIONS
+     INITIALIZATIONS for DYNAMICS and RELAXATION
+  Minimum horizontal grid spacing (dx, dy):    8817.42100181064     
+   9118.31172278076     
+  Minimum vertical   grid spacing (dz)    :    20.0000000000000     
+  Value of big time step used    :    30.0000000000000     
+ Subr.[init_grid_metrics] ...
+  
+  Damping coefficients in Rayleigh damping layer
+  level   height    damping coefficient
+     1    21750.00      0.163970
+     2    19950.00      0.144962
+     3    18325.00      0.115482
+     4    16850.00      0.083333
+     5    15525.00      0.054307
+     6    14350.00      0.031501
+     7    13292.50      0.015296
+     8    12330.00      0.005258
+     9    11447.50      0.000601
+  
+     Lowest Level with Rayleigh-damping:            9
+  
+ set  beta_s_8=beta_s_4, ... (recommended together with i_div_at_horiz_bound=1)
+ divergence damping vertically implicit
+     PHYSICAL PACKAGES
+ *****************************************************
+ *   Radiative transfer calculations employ data     *
+ *        provided in routine rad_aibi               *
+ *****************************************************
+     INITIALIZE CONTROL VARIABLES AND MEAN VALUES
+   TIME STEPPING
+ CS=   348.928160417572       DT=   30.0000000000000       DTSMAX=
+   16.3492290186082     
+ SHORT TIME STEP of 1. RK step    5.00000000000000      , number of steps: 
+           2
+ SHORT TIME STEP of 2. RK step    5.00000000000000      , number of steps: 
+           3
+ SHORT TIME STEP of 3. RK step    5.00000000000000      , number of steps: 
+           6
+ ismtstep_sum =           11  ismtstep_max =            6
+  LEVELINDEX WHERE LEVELS BECOME FLAT, KFLAT =            9
+  BETA_SW  =   0.400000000000000       BETA_GW  =   0.400000000000000     
+  BETA2_SW =   0.400000000000000       BETA2_GW =   0.400000000000000     
+  XKD =   0.100000000000000     
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out01/lffd2008071400.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out02/lffd2008071400.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out03/lffd2008071400p.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008071406.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008071409.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out01/lffd2008071406.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out02/lffd2008071406.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out03/lffd2008071406p.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008071412.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008071415.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out01/lffd2008071412.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out02/lffd2008071412.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out03/lffd2008071412p.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008071418.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008071421.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out01/lffd2008071418.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out02/lffd2008071418.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out03/lffd2008071418p.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008071500.nc
+ CLOSING ncdf FILE
+ ...... FORECAST TIME IS NOW 000001 DAYS ......
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008071503.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out01/lffd2008071500.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out02/lffd2008071500.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out03/lffd2008071500p.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008071506.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008071509.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out01/lffd2008071506.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out02/lffd2008071506.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out03/lffd2008071506p.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008071512.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008071515.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out01/lffd2008071512.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out02/lffd2008071512.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out03/lffd2008071512p.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008071518.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008071521.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out01/lffd2008071518.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out02/lffd2008071518.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out03/lffd2008071518p.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008071600.nc
+ CLOSING ncdf FILE
+ ...... FORECAST TIME IS NOW 000002 DAYS ......
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008071603.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out01/lffd2008071600.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out02/lffd2008071600.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out03/lffd2008071600p.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008071606.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008071609.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out01/lffd2008071606.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out02/lffd2008071606.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out03/lffd2008071606p.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008071612.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008071615.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out01/lffd2008071612.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out02/lffd2008071612.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out03/lffd2008071612p.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008071618.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008071621.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out01/lffd2008071618.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out02/lffd2008071618.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out03/lffd2008071618p.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008071700.nc
+ CLOSING ncdf FILE
+ ...... FORECAST TIME IS NOW 000003 DAYS ......
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008071703.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out01/lffd2008071700.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out02/lffd2008071700.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out03/lffd2008071700p.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008071706.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out01/lffd2008071703.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out02/lffd2008071703.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out03/lffd2008071703p.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008071709.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out01/lffd2008071706.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out02/lffd2008071706.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out03/lffd2008071706p.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008071712.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out01/lffd2008071709.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out02/lffd2008071709.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out03/lffd2008071709p.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008071715.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out01/lffd2008071712.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out02/lffd2008071712.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out03/lffd2008071712p.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008071718.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out01/lffd2008071715.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out02/lffd2008071715.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out03/lffd2008071715p.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008071721.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out01/lffd2008071718.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out02/lffd2008071718.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out03/lffd2008071718p.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008071800.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out01/lffd2008071721.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out02/lffd2008071721.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out03/lffd2008071721p.nc
+ CLOSING ncdf FILE
+ ...... FORECAST TIME IS NOW 000004 DAYS ......
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008071803.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out01/lffd2008071800.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out02/lffd2008071800.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out03/lffd2008071800p.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008071806.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out01/lffd2008071803.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out02/lffd2008071803.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out03/lffd2008071803p.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008071809.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out01/lffd2008071806.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out02/lffd2008071806.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out03/lffd2008071806p.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008071812.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out01/lffd2008071809.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out02/lffd2008071809.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out03/lffd2008071809p.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008071815.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out01/lffd2008071812.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out02/lffd2008071812.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out03/lffd2008071812p.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008071818.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out01/lffd2008071815.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out02/lffd2008071815.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out03/lffd2008071815p.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008071821.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out01/lffd2008071818.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out02/lffd2008071818.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out03/lffd2008071818p.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008071900.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out01/lffd2008071821.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out02/lffd2008071821.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out03/lffd2008071821p.nc
+ CLOSING ncdf FILE
+ ...... FORECAST TIME IS NOW 000005 DAYS ......
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008071903.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out01/lffd2008071900.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out02/lffd2008071900.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out03/lffd2008071900p.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008071906.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out01/lffd2008071903.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out02/lffd2008071903.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out03/lffd2008071903p.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008071909.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out01/lffd2008071906.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out02/lffd2008071906.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out03/lffd2008071906p.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008071912.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out01/lffd2008071909.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out02/lffd2008071909.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out03/lffd2008071909p.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008071915.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out01/lffd2008071912.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out02/lffd2008071912.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out03/lffd2008071912p.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008071918.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out01/lffd2008071915.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out02/lffd2008071915.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out03/lffd2008071915p.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008071921.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out01/lffd2008071918.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out02/lffd2008071918.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out03/lffd2008071918p.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008072000.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out01/lffd2008071921.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out02/lffd2008071921.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out03/lffd2008071921p.nc
+ CLOSING ncdf FILE
+ ...... FORECAST TIME IS NOW 000006 DAYS ......
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008072003.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out01/lffd2008072000.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out02/lffd2008072000.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out03/lffd2008072000p.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008072006.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out01/lffd2008072003.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out02/lffd2008072003.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out03/lffd2008072003p.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008072009.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out01/lffd2008072006.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out02/lffd2008072006.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out03/lffd2008072006p.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008072012.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out01/lffd2008072009.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out02/lffd2008072009.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out03/lffd2008072009p.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008072015.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out01/lffd2008072012.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out02/lffd2008072012.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out03/lffd2008072012p.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008072018.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out01/lffd2008072015.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out02/lffd2008072015.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out03/lffd2008072015p.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008072021.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out01/lffd2008072018.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out02/lffd2008072018.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out03/lffd2008072018p.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008072100.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out01/lffd2008072021.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out02/lffd2008072021.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out03/lffd2008072021p.nc
+ CLOSING ncdf FILE
+ ...... FORECAST TIME IS NOW 000007 DAYS ......
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008072103.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out01/lffd2008072100.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out02/lffd2008072100.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out03/lffd2008072100p.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008072106.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out01/lffd2008072103.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out02/lffd2008072103.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out03/lffd2008072103p.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008072109.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out01/lffd2008072106.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out02/lffd2008072106.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out03/lffd2008072106p.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008072112.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out01/lffd2008072109.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out02/lffd2008072109.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out03/lffd2008072109p.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008072115.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out01/lffd2008072112.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out02/lffd2008072112.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out03/lffd2008072112p.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008072118.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out01/lffd2008072115.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out02/lffd2008072115.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out03/lffd2008072115p.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008072121.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out01/lffd2008072118.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out02/lffd2008072118.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out03/lffd2008072118p.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008072200.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out01/lffd2008072121.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out02/lffd2008072121.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out03/lffd2008072121p.nc
+ CLOSING ncdf FILE
+ ...... FORECAST TIME IS NOW 000008 DAYS ......
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008072203.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out01/lffd2008072200.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out02/lffd2008072200.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out03/lffd2008072200p.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008072206.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out01/lffd2008072203.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out02/lffd2008072203.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out03/lffd2008072203p.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008072209.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out01/lffd2008072206.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out02/lffd2008072206.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out03/lffd2008072206p.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008072212.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out01/lffd2008072209.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out02/lffd2008072209.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out03/lffd2008072209p.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008072215.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out01/lffd2008072212.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out02/lffd2008072212.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out03/lffd2008072212p.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008072218.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out01/lffd2008072215.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out02/lffd2008072215.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out03/lffd2008072215p.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008072221.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out01/lffd2008072218.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out02/lffd2008072218.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out03/lffd2008072218p.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008072300.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out01/lffd2008072221.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out02/lffd2008072221.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out03/lffd2008072221p.nc
+ CLOSING ncdf FILE
+ ...... FORECAST TIME IS NOW 000009 DAYS ......
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008072303.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out01/lffd2008072300.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out02/lffd2008072300.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out03/lffd2008072300p.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008072306.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out01/lffd2008072303.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out02/lffd2008072303.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out03/lffd2008072303p.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008072309.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out01/lffd2008072306.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out02/lffd2008072306.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out03/lffd2008072306p.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008072312.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out01/lffd2008072309.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out02/lffd2008072309.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out03/lffd2008072309p.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008072315.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out01/lffd2008072312.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out02/lffd2008072312.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out03/lffd2008072312p.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008072318.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out01/lffd2008072315.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out02/lffd2008072315.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out03/lffd2008072315p.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008072321.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out01/lffd2008072318.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out02/lffd2008072318.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out03/lffd2008072318p.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008072400.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out01/lffd2008072321.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out02/lffd2008072321.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out03/lffd2008072321p.nc
+ CLOSING ncdf FILE
+ ...... FORECAST TIME IS NOW 000010 DAYS ......
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008072403.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out01/lffd2008072400.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out02/lffd2008072400.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out03/lffd2008072400p.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008072406.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out01/lffd2008072403.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out02/lffd2008072403.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out03/lffd2008072403p.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008072409.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out01/lffd2008072406.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out02/lffd2008072406.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out03/lffd2008072406p.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008072412.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out01/lffd2008072409.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out02/lffd2008072409.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out03/lffd2008072409p.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008072415.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out01/lffd2008072412.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out02/lffd2008072412.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out03/lffd2008072412p.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008072418.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out01/lffd2008072415.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out02/lffd2008072415.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out03/lffd2008072415p.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008072421.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out01/lffd2008072418.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out02/lffd2008072418.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out03/lffd2008072418p.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/int2lm/lbfd2008072500.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out01/lffd2008072421.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out02/lffd2008072421.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out03/lffd2008072421p.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/restarts/lrfd2008072500o.nc
+ CLOSING ncdf FILE
+ ...... FORECAST TIME IS NOW 000011 DAYS ......
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out01/lffd2008072500.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out02/lffd2008072500.nc
+ CLOSING ncdf FILE
+ OPEN: ncdf-file: 
+ /m2data2/yycheng/data_stage/cptp/cptp_out/cclm/out03/lffd2008072500p.nc
+ CLOSING ncdf FILE
+ END OF TIME STEPPING
+ CLEAN UP
+------------------------------- CCLM finished -------------------------------
