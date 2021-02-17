@@ -12,6 +12,8 @@ DATADIR=/HGST_SATA_8T_3/yycheng/data_stage/cptp/ # 所有运行数据的位置
 
 ./cptp_ext_test EXTPAR参数，WEBpep生成后上传
 
+./CCLM_overview.md 简单的操作流程，以及使用脚本的简单说明
+
 ---
 
 2020.10.13 部署到.19服务器上    
